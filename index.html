@@ -11,9 +11,9 @@
 		    line-height: 1.8;
 		}
 #top{
-	width: 100;
+	width: 100%;
 	color: white;
-	background: grey;
+	background: #e6e6e6;
 	font-weight: bold;
 	letter-spacing: 0.025em;
 }
@@ -26,12 +26,15 @@
 	padding: 0 3em;
 	line-height: 3em;
 }
+
 .navbar li a:hover {
 	background-color: cadetblue;
 	color: #fff;
 }
+
 .navbar-fixed {
   position: fixed;
+	z-index: 1;
 
 }
 #about-us{
@@ -82,7 +85,7 @@
 		<div id="top">
 			<ul id="navbar">
 				<li><a href="#" id="homepage">GREEN +</a></li>
-				<li><a href="#contact" id="about-us">About us</a></li>
+				<li><a href="#point" id="about-us">About us</a></li>
 			</ul>
 
 		</div>
@@ -92,8 +95,9 @@
 			<h1>Salvage Your E-devices<span class="hide"> Instantly</span></h1>
 		</div>
 		<!-- About us content-->
+
 		<div class="" id="content1">
-			<h2>ABOUT US</h2>
+			<h2 id="point">ABOUT US</h2>
 			<p><em>Contact Information</em></p>
 			<p>Address: </p>
 			<p>Email: </p>
@@ -116,7 +120,7 @@
 		<!-- Second contents-->
 		<div class="" id="content2">
 			<h2>Our Work..</h2>
-			<p>Someone plese fix the sticky navbar~~</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
 		<!-- Theid Image with Add Whatever -->
@@ -150,11 +154,13 @@
 
 		        if (scrollTop > y_pos + height) {
 		            $navbar.addClass("navbar-fixed").animate({
-		                top: 0
+										top: 0,
+										marginBottom:"-22px"
+
 		            });
 		        } else if (scrollTop <= y_pos) {
 		            $navbar.removeClass("navbar-fixed").clearQueue().animate({
-		                top: "-48px"
+		               top: "-48px"
 		            }, 0);
 		        }
 		    });
