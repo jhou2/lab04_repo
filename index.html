@@ -4,27 +4,42 @@
 		<meta charset="utf-8">
 		<title>TEAM 2</title>
 		<style media="screen">
-		body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-		body, html {
-		    height: 100%;
-		    color: #777;
-		    line-height: 1.8;
-		}
+
+@import url(https://fonts.googleapis.com/css?family=Flamenco);
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato", sans-serif;
+}
+
+body, html {
+	height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
 #top{
-	width: 100%;
+	width: 99%;
 	color: white;
 	background: #e6e6e6;
 	font-weight: bold;
-	letter-spacing: 0.025em;
 }
+
 #top ul{
-	text-align: center;
-	margin: 0;
+	margin-right: 25px;
 }
+
 #top ul li {
-	display: inline-block;
+	display: inline;
 	padding: 0 3em;
 	line-height: 3em;
+}
+
+.middletext {
+	line-height: 300px;
+	vertical-align: middle;
+	text-align: center;
+	color: red;
+	font-family: Flamenco;
 }
 
 .navbar li a:hover {
@@ -39,9 +54,11 @@
 }
 #about-us{
 	float: right;
+	text-align: center;
 }
 #homepage{
 	float: left;
+	text-align: center;
 }
 
 /* About Section */
@@ -62,7 +79,7 @@
 /* First image */
 .bgimg-1 {
     background-image: url('https://farm6.staticflickr.com/5542/30017499820_49927254e0_k.jpg');
-    min-height: 100%;
+    min-height: 400px;
 }
 
 /* Second image */
@@ -84,7 +101,7 @@
 	<body>
 		<div id="top">
 			<ul id="navbar">
-				<li><a href="#" id="homepage">GREEN +</a></li>
+				<li><a href="#" id="homepage">Green+</a></li>
 				<li><a href="#point" id="about-us">About us</a></li>
 			</ul>
 
@@ -92,7 +109,7 @@
 
 		<!-- First Image -->
 		<div class="bgimg-1" style="white-space:nowrap;">
-			<h1>Salvage Your E-devices<span class="hide"> Instantly</span></h1>
+			<h1 class = "middletext">Salvage Your E-devices<span class="hide"> Instantly</span></h1>
 		</div>
 		<!-- About us content-->
 
@@ -115,7 +132,7 @@
 
 		<!-- Second Image with Add Whatever -->
 		<div class="bgimg-2">
-			<h1>Hi Everyone, In this section..<br>We are going to talk about...</h1>
+			<h1 class = "middletext">Hi Everyone, In this section..<br>We are going to talk about...</h1>
 		</div>
 		<!-- Second contents-->
 		<div class="" id="content2">
@@ -125,7 +142,7 @@
 
 		<!-- Theid Image with Add Whatever -->
 		<div class="bgimg-3">
-			<h1>Hi Everyone, In this section..<br>We are going to talk about...</h1>
+			<h1 class = "middletext">Hi Everyone, In this section..<br>We are going to talk about...</h1>
 		</div>
 		<!-- Third contents-->
 		<div class="" id="content3">
