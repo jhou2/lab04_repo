@@ -2,10 +2,15 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title>TEAM 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<style media="screen">
+	<title>TEAM 2</title>
+
 
 	@import url(https://fonts.googleapis.com/css?family=Flamenco);
+
 
 	body, h1, h2, h3, h4, h5, h6 {
 		font-family: "Lato", sans-serif;
@@ -23,21 +28,12 @@
 		font-weight: bold;
 	}
 
-	#top ul{
-		margin-right: 30px;
-	}
-
-	#top ul li {
-		display: inline;
-		padding: 0 3em;
-		line-height: 3em;
-	}
 
 	.middletext {
 		line-height: 300px;
 		vertical-align: middle;
 		text-align: center;
-		color: red;
+		color: black;
 		font-family: Flamenco;
 	}
 
@@ -50,6 +46,10 @@
 		position: fixed;
 		z-index: 1;
 
+	}
+
+	.fields {
+		margin: 5%;
 	}
 	#about-us{
 		float: right;
@@ -64,7 +64,7 @@
 		outline: 0;
 		border-width: 0px 0px 1px 0px;
 		border-color: grey;
-		width: 100%;
+		width: 80%;
 		display: inline;
 	}
 
@@ -107,11 +107,20 @@
 </head>
 <body>
 	<div id="top">
+<<<<<<< HEAD
 		<ul id="navbar">
 			<li><a href="#" id="homepage">Green+</a></li>
 			<li><a href="#point" id="about-us">About Us</a></li>
 		</ul>
+=======
+		<nav class="navbar sticky-top navbar-light bg-light">
+  
+>>>>>>> cae1126ed912f6f4a0c9a739fdfcf1f3eaf7399a
 
+			<li><a href="#" class="navbar-brand glyphicon glyphicon-phone" id="homepage">Green+</a></li>
+			<li><a href="#point" class="navbar-brand" id="about-us">About us</a></li>
+		
+		</nav>
 	</div>
 
 	<!-- First Image -->
@@ -122,8 +131,9 @@
 
 		<!--Add additional information in this section -->
 		<div class="fields">
-			<form action = "file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/index.html">
+			<form action = "">
 				<fieldset>
+<<<<<<< HEAD
 					<legend>Your Personal Info</legend><br/>
 					Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" autofocus = "autofocus" required/><br/><br/><br/>
 					Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "House # and Street #" required /><br/><br/><br/>
@@ -133,6 +143,11 @@
 					</textarea><br/><br/>
 					Your Device Info<br/><br/>
 					Device type:<br/>
+=======
+
+					<h2>Device type</h2><br/>
+			
+>>>>>>> cae1126ed912f6f4a0c9a739fdfcf1f3eaf7399a
 					<select name="device">
 						<option value="">Choose an option</option>
 						<option value="computer" required>Computer</option>
@@ -142,11 +157,31 @@
 						<option value="debris" required>Debris</option>
 						<option value="parts" required>Parts</option>
 						<option value="cords and wires" required>Cords and Wires</option>
-					</select>
-					<br/><br/>
+					</select><br/><br/>
+					<input type = "submit" value = "Submit" onclick="showPersonalInfo()"/> <input type = "reset" value = "Reset"/><br/><br/>
+					<br/><br/><br/>
+				</fieldset>
+			</form>
+</div>
+					<div id="personalInfo" class="fields">
+						<fieldset>
+							<form>
+					<h2>Your Personal Info</h2>
+						<br/>
+					Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+					Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "House # and Street #" required /><br/><br/><br/>
+					Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+					Phone Number: <br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+					Any Additional Information <br/><textarea name = "description" rows = "13" cols = "50">
+					</textarea><br/><br/>
 					<input type = "submit" value = "Submit"/> <input type = "reset" value = "Reset"/><br/><br/>
 				</fieldset>
 			</form>
+		</div>
+
+
+
+			
 
 
 	<!-- Second Image with Add Whatever -->
@@ -154,7 +189,7 @@
 		<h1 class = "middletext">Hi Everyone, In this section..<br>We are going to talk about...</h1>
 	</div>
 	<!-- Second contents-->
-	<div class="" id="content2">
+	<div class="fields" id="content2">
 		<h2>Our Work..</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
@@ -166,7 +201,7 @@
 	<!-- Third contents-->
 	<!-- About us content-->
 
-	<div id="content3">
+	<div id="content3" class="fields">
 		<h2 id="point">ABOUT US</h2>
 		<p><em>Contact Information</em></p>
 		<p>Address<br> Willingdon st, Burnaby, BC</p>
@@ -175,38 +210,74 @@
 </div>
 
 	<!-- footer -->
-	<footer>
+	<footer class="fields">
 		<p>Made by Jessica, Sunny, Chris</p>
 	</footer>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-	</script>
+ 	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<script type="text/javascript">
-		(function($) {
-			"use strict";
 
+		function showPersonalInfo() {
+    var x = document.getElementById("personalInfo");
+    x.style.display = "block";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+		(function($) {
+			
 			var $navbar = $("#top"),
 			y_pos = $navbar.offset().top,
 			height = $navbar.height();
 
+			//Sticky menu bar javascript		
 			$(document).scroll(function() {
 				var scrollTop = $(this).scrollTop();
 
 				if (scrollTop > y_pos + height) {
 					$navbar.addClass("navbar-fixed").animate({
-						top: 0,
-						marginBottom:"-22px"
-
+						top: 0
 					});
 				} else if (scrollTop <= y_pos) {
 					$navbar.removeClass("navbar-fixed").clearQueue().animate({
-						top: "-48px"
 					}, 0);
 				}
 			});
 
+
+
+
+
+
+
+
 		})(jQuery, undefined);
+
+	</script>
+	<script>
+		//Goes to the top page when hit refresh.
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+  $("personalInfo").style.display = "none";
+
+
+}
+
+
+
 	</script>
 
 
