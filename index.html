@@ -127,7 +127,7 @@
 		<div class="fields">
 
 <div id="deviceInfo">
-	<form action="">
+	<form action="" onsubmit="showPersonalInfo()">
 		<fieldset>
 			<h4>Device type</h4><br/>
 					<select name="device">
@@ -139,7 +139,7 @@
 						<option value="debris" required>Debris</option>
                         <option value="parts" required>Parts</option>
 					</select><br/><br/>
-					<input id="button1" type = "submit" value = "Submit" onclick="showPersonalInfo()"/> 
+					<input id="button1" type = "submit" value = "Submit"/> 
 					<input type = "reset" value = "Reset"/><br/><br/>
 					<br/><br/>
 		</fieldset>
@@ -236,18 +236,20 @@
     $("#personalInfo").hide();
     
 
-    $("#button1").click(function(){
-        $("#personalInfo").show();
-    });
+    // $("#button1").click(function(){
+    //     $("#personalInfo").show();
+    //         alert("The form was submitted");
+    // });
 });
 
 // 		  var p = document.getElementById("personalInfo");
 //   			p.style.display = "none";
 
 
-// 		function showPersonalInfo() {
-//     p.style.display = "block";
-// }
+		function showPersonalInfo() {
+     $("#personalInfo").show();
+            alert("The form was submitted");
+}
 
 
 
