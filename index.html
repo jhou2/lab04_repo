@@ -118,24 +118,18 @@
 	</div>
 
 	<!-- First Image -->
-	<div class="bgimg-1" style="white-space:nowrap;">
+	<div class="bgimg-1">
 		<h1 class = "middletext">Salvage Your E-devices Instantly</h1>
 	</div>
 
 
 		<!--Add additional information in this section -->
 		<div class="fields">
-			<form action = "">
-				<fieldset>
-					<legend>Your Personal Info</legend><br/>
-					Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" autofocus = "autofocus" required/><br/><br/><br/>
-					Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
-					Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
-					Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
-					Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
-					</textarea><br/><br/>
 
-					<h4>Device type</h4><br/>
+<div id="deviceInfo">
+	<form action="">
+		<fieldset>
+			<h4>Device type</h4><br/>
 					<select name="device">
 						<option value="">Choose an option</option>
 						<option value="computer" required>Computer</option>
@@ -145,10 +139,28 @@
 						<option value="debris" required>Debris</option>
                         <option value="parts" required>Parts</option>
 					</select><br/><br/>
-					<input type = "submit" value = "Submit" onclick="showPersonalInfo()"/> <input type = "reset" value = "Reset"/><br/><br/>
-					<br/><br/><br/>
+					<input id="button1" type = "submit" value = "Submit" onclick="showPersonalInfo()"/> 
+					<input type = "reset" value = "Reset"/><br/><br/>
+					<br/><br/>
+		</fieldset>
+	</form>
+</div>
+
+			<div id="personalInfo">
+			<form action = "">
+				<fieldset>
+					<h4>Your Personal Info</h4><br/>
+					Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+					Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
+					Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+					Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+					Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+					</textarea><br/><br/>
+					<input type = "submit" value = "Submit"/> <input type = "reset" value = "Reset"/>			
 				</fieldset>
 			</form>
+		</div>
+
 </div>
 
 
@@ -194,20 +206,6 @@
 
 	<script type="text/javascript">
 
-		function showPersonalInfo() {
-    var x = document.getElementById("personalInfo");
-    x.style.display = "block";
-}
-
-
-
-
-
-
-
-
-
-
 
 
 		(function($) {
@@ -230,23 +228,32 @@
 				}
 			});
 
-
-
-
-
-
-
-
 		})(jQuery, undefined);
 
 	</script>
 	<script>
+		$(document).ready(function(){
+    $("#personalInfo").hide();
+    
+
+    $("#button1").click(function(){
+        $("#personalInfo").show();
+    });
+});
+
+// 		  var p = document.getElementById("personalInfo");
+//   			p.style.display = "none";
+
+
+// 		function showPersonalInfo() {
+//     p.style.display = "block";
+// }
+
+
+
 		//Goes to the top page when hit refresh.
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
-  $("personalInfo").style.display = "none";
-
-
 }
 
 
