@@ -64,6 +64,7 @@
 		text-align: center;
 	}
 
+
 	.textfield {
 		outline: 0;
 		border-width: 0px 0px 1px 0px;
@@ -127,7 +128,7 @@
 		<div class="fields">
 
 <div id="deviceInfo">
-	<form action="" onsubmit="showPersonalInfo()">
+	<form>
 		<fieldset>
 			<h4>Device type</h4><br/>
 					<select name="device">
@@ -139,7 +140,7 @@
 						<option value="debris" required>Debris</option>
                         <option value="parts" required>Parts</option>
 					</select><br/><br/>
-					<input id="button1" type = "submit" value = "Submit"/> 
+					<a href = "#" id = "submit1">Submit</a>
 					<input type = "reset" value = "Reset"/><br/><br/>
 					<br/><br/>
 		</fieldset>
@@ -147,7 +148,7 @@
 </div>
 
 			<div id="personalInfo">
-			<form action = "">
+			<form>
 				<fieldset>
 					<h4>Your Personal Info</h4><br/>
 					Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
@@ -156,7 +157,7 @@
 					Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
 					Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
 					</textarea><br/><br/>
-					<input type = "submit" value = "Submit"/> <input type = "reset" value = "Reset"/>			
+					<a href = "#" id = "button1">Submit</a><input type = "reset" value = "Reset"/>
 				</fieldset>
 			</form>
 		</div>
@@ -165,7 +166,7 @@
 
 
 
-			
+
 
 
 	<!-- Second Image with Add Whatever -->
@@ -204,53 +205,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-	<script type="text/javascript">
-
-
-
-		(function($) {
-			
-			var $navbar = $("#top"),
-			y_pos = $navbar.offset().top,
-			height = $navbar.height();
-
-			//Sticky menu bar javascript		
-			$(document).scroll(function() {
-				var scrollTop = $(this).scrollTop();
-
-				if (scrollTop > y_pos + height) {
-					$navbar.addClass("navbar-fixed").animate({
-						top: 0
-					});
-				} else if (scrollTop <= y_pos) {
-					$navbar.removeClass("navbar-fixed").clearQueue().animate({
-					}, 0);
-				}
-			});
-
-		})(jQuery, undefined);
-
+	<script type = "text/javascript" src = "indexjs.js"></script>
+	<script type = "text/javascript" src = "scroll.js"></script>
 	</script>
 	<script>
-		$(document).ready(function(){
-    $("#personalInfo").hide();
-    
-
-    // $("#button1").click(function(){
-    //     $("#personalInfo").show();
-    //         alert("The form was submitted");
-    // });
-});
-
-// 		  var p = document.getElementById("personalInfo");
-//   			p.style.display = "none";
-
-
-		function showPersonalInfo() {
-     $("#personalInfo").show();
-            alert("The form was submitted");
-}
-
 
 
 		//Goes to the top page when hit refresh.
