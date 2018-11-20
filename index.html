@@ -142,6 +142,7 @@
  	display: block;
  	clear: both;
  	width: 50%;
+ 	margin: 5%;
  }
 </style>
 </head>
@@ -160,45 +161,24 @@
 
 
 		<!--Add additional information in this section -->
-		<div class="fields">
+		<div class="fields btn-group" id="deviceInfo">
 
-        <div id="deviceInfo">
+     
         	<!-- <a class="btn btn-light" href="#" role="button">Link</a> -->
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device1"><br/>Computer</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device2"><br/>Laptop</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device3"><br/>Phone</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device4"><br/>Accessory</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device5"><br/>debris</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device6"><br/>Parts</button>
+        	
+
+<button class="btn btn-light" type="button" name="options" id="option1"><img src = "logo.png" id = "device1"><br/>Computer</button>
+<button class="btn btn-light" type="button" name="options" id="option2"><img src = "logo.png" id = "device2"><br/>Laptop</button>
+<button class="btn btn-light" type="button" name="options" id="option3"><img src = "logo.png" id = "device3"><br/>Phone</button>
+<button class="btn btn-light" type="button" name="options" id="option4"><img src = "logo.png" id = "device4"><br/>Accessory</button>
+<button class="btn btn-light" type="button" name="options" id="option5"><img src = "logo.png" id = "device5"><br/>debris</button>
+<button class="btn btn-light" type="button" name="options" id="option6"><img src = "logo.png" id = "device6"><br/>Parts</button>
+
 </div>
 
 
 
 
-
-<!-- <input class="btn btn-light" type="button" value="button">
-<input class="btn btn-light" type="button" value="button">
-<input class="btn btn-light" type="button" value="button"> -->
-
-
-
-
-			<!-- <h4>Device type</h4>
-            <p>Please choose your device type.</p><br/>
-                <form action ="/action_page.php">
-					<select required>
-                        <option value="">Choose an option</option>
-						<option value="computer">Computer</option>
-						<option value="laptop">Laptop</option>
-						<option value="phone">Phone</option>
-						<option value="accessory">Accessory</option>
-						<option value="debris">Debris</option>
-                        <option value="parts">Parts</option>
-                    </select><br/><br/>
-					<a href = "#" id = "submit1"><input type = "submit" value = "Submit"/></a>
-					<input type = "reset" value = "Reset"/><br/><br/>
-					<br/><br/>
-            </form> -->
 
 			<div id="personalInfo">
 			<form>
@@ -216,24 +196,6 @@
 			</form>
 		</div>
 
-<!--
-			<div id="typeInfo">
-				<form>
-						<h4>Device type</h4><br/>
-								<select id = "selectType" required>
-									<option value="">---</option>
-									<option value="Computer">Computer</option>
-									<option value="Laptop">Laptop</option>
-									<option value="Phone">Phone</option>
-									<option value="Accessory">Accessory</option>
-									<option value="Debris">Debris</option>
-			            <option value="Parts">Parts</option>
-								</select><br/><br/>
-								<a href = "#" id = "submit1">Submit</a>
-								<br/><br/>
-				</form>
-			</div>
--->
 
 		<!-- <div id="phoneBrandInfo">
 		<form>
@@ -324,21 +286,9 @@
 </form>
 </div> -->
 
-<div id="personalInfo">
-<form>
-	<fieldset>
-		<h4>Your Personal Info</h4><br/>
-		Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
-		Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
-		Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
-		Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
-		Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
-		</textarea><br/><br/>
-		<a href = "#" id = "button1">Submit</a>
-	</fieldset>
-</form>
-</div>
 
+
+<!-- 
 <div id = "tableOfDevices">
 	<table>
 		<tr>
@@ -361,7 +311,7 @@
 		</tr>
 	</table>
 </div>
-
+ -->
 <!-- <div id="deviceInfo">
 <h4>Device type</h4>
 		<p>Please choose your device type.</p><br/>
@@ -397,7 +347,7 @@
 </form>
 </div> -->
 
-</div>
+
 
 
 
@@ -441,22 +391,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<script type = "text/javascript" src = "indexjs.js"></script>
-	<script type = "text/javascript" src = "scroll.js"></script>
-	<script>		//Goes to the top page when hit refresh.
+	
+	<script>		
+
+	//Goes to the top page when hit refresh.
 		window.onbeforeunload = function () {
   		window.scrollTo(0, 0);
 		}
-	</script>
-	<script>
 
-		//Goes to the top page when hit refresh.
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
-
-
+//button select functions
+		$(".btn-group > .btn").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+});
 
 	</script>
+
 
 
 </body>
