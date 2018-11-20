@@ -163,6 +163,7 @@
  	clear: both;
  	width: 50%;
     margin-left: 50px;
+    margin: 5%;
  }
 </style>
 </head>
@@ -196,7 +197,7 @@
 					Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # (if applicable) and Street #" required /><br/><br/><br/>
 					Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
 					Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
-					Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+					Any Additional Information:<br/><textarea name = "description" rows = "10" cols = "50">
 					</textarea><br/><br/>
 					<a href = "#" id = "submit2"><input type = "submit" value = "Submit"/></a>
                     <input type = "reset" value = "Reset"/>
@@ -293,6 +294,11 @@
 </form>
 </div> -->
 
+
+
+
+<!-- 
+
 <div id = "tableOfDevices">
 	<table>
 		<tr>
@@ -315,7 +321,7 @@
 		</tr>
 	</table>
 </div>
-
+ -->
 <!-- <div id="deviceInfo">
 <h4>Device type</h4>
 		<p>Please choose your device type.</p><br/>
@@ -351,7 +357,7 @@
 </form>
 </div> -->
 
-</div>
+
 
 
 
@@ -395,22 +401,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<script type = "text/javascript" src = "indexjs.js"></script>
-	<script type = "text/javascript" src = "scroll.js"></script>
-	<script>		//Goes to the top page when hit refresh.
+	
+	<script>		
+
+	//Goes to the top page when hit refresh.
 		window.onbeforeunload = function () {
   		window.scrollTo(0, 0);
 		}
-	</script>
-	<script>
 
-		//Goes to the top page when hit refresh.
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
-
-
+//button select functions
+		$(".btn-group > .btn").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+});
 
 	</script>
+
 
 
 </body>
