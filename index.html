@@ -86,9 +86,25 @@
         float: left;
     }
 
-	#device1, #device2, #device3, #device4, #device5, #device6{
-        width: 30%;
+	#device1, #device2, #device3, #device5{
+        width: 70%;
+        height: 55%;
+        margin-bottom: 10px;
+        filter: opacity(30%);
 
+    }
+    #device4{
+        width: 80%;
+        height: 60%;
+        margin-bottom: 4px;
+        filter: opacity(30%);    
+    }
+    #device6{
+        width: 80%;
+        height: 65%;
+        margin-bottom: -3px;
+        filter: opacity(30%);    
+    }  
     }
 
 
@@ -135,7 +151,7 @@
 	width: 130px;
 	display: inline;
 	height: 130px;
-	margin: 15px;
+	margin: 19px;
 	float: left;
  }
  #personalInfo {
@@ -164,12 +180,12 @@
 
         <div id="deviceInfo">
         	<!-- <a class="btn btn-light" href="#" role="button">Link</a> -->
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device1"><br/>Computer</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device2"><br/>Laptop</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device3"><br/>Phone</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device4"><br/>Accessory</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device5"><br/>debris</button>
-<button class="btn btn-light" type="button"><img src = "logo.png" id = "device6"><br/>Parts</button>
+<button class="btn btn-light" type="button"><img src = "computericon.png" id = "device1"><br/>Computer</button>
+<button class="btn btn-light" type="button"><img src = "laptopicon.png" id = "device2"><br/>Laptop</button>
+<button class="btn btn-light" type="button"><img src = "cellphoneicon.png" id = "device3"><br/>Phone</button>
+<button class="btn btn-light" type="button"><img src = "accessoriesicon.png" id = "device4"><br/>Accessory</button>
+<button class="btn btn-light" type="button"><img src = "debrisicon.png" id = "device5"><br/>Debris</button>
+<button class="btn btn-light" type="button"><img src = "partsicon.png" id = "device6"><br/>Parts</button>
 </div>
 
 
@@ -323,21 +339,6 @@
 	</fieldset>
 </form>
 </div> -->
-
-<div id="personalInfo">
-<form>
-	<fieldset>
-		<h4>Your Personal Info</h4><br/>
-		Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
-		Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
-		Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
-		Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
-		Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
-		</textarea><br/><br/>
-		<a href = "#" id = "button1">Submit</a>
-	</fieldset>
-</form>
-</div>
 
 <div id = "tableOfDevices">
 	<table>
