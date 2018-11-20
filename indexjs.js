@@ -1,7 +1,14 @@
 $('#personalInfo').hide();
+$('#phoneBrandInfo').hide();
+$('#computerBrandInfo').hide();
+$('#modelInfo').hide();
+$('#conditionInfo').hide();
+$('#addAnotherDevice').hide();
 
 $('#submit1').click(function(e){
-  $('#deviceInfo').hide();
+  $('#typeInfo').hide();
   $('#personalInfo').toggle();
   e.preventDefault();
+});
+
 });
