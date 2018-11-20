@@ -1,14 +1,19 @@
-$('#personalInfo').hide();
-$('#phoneBrandInfo').hide();
-$('#computerBrandInfo').hide();
-$('#modelInfo').hide();
-$('#conditionInfo').hide();
-$('#addAnotherDevice').hide();
+// $('#personalInfo').hide();
+// $('#brandInfo-computer').hide();
+// $('#brandInfo-phone').hide();
 
-$('#submit1').click(function(e){
-  $('#typeInfo').hide();
-  $('#personalInfo').toggle();
-  e.preventDefault();
-});
 
-});
+// $('#submit1').click(function(e){
+//  // $('#deviceInfo').hide();
+//  if ($('#')) {}
+//   $('#brandInfo-computer').toggle();
+//   e.preventDefault();
+// });
+
+// $('#submit2').click(function(e){
+//   $('#deviceInfo').hide();
+//   $('#brandInfo').hide();
+
+//   $('#personalInfo').toggle();
+//   e.preventDefault();
+// });

@@ -86,6 +86,12 @@
         float: left;
     }
 
+	#devices{
+        width: 30%;
+
+    }
+
+
 	/* Table of Devices*/
 	#tableOfDevices {
 		float: right;
@@ -125,7 +131,18 @@
 	}
 
 
-
+ .btn{
+	width: 150px;
+	display: inline;
+	height: 150px;
+	margin: 15px;
+	float: left;
+ }
+ #personalInfo {
+ 	display: block;
+ 	clear: both;
+ 	width: 50%;
+ }
 </style>
 </head>
 <body>
@@ -144,6 +161,60 @@
 
 		<!--Add additional information in this section -->
 		<div class="fields">
+
+        <div id="deviceInfo">
+        	<!-- <a class="btn btn-light" href="#" role="button">Link</a> -->
+<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Computer</button>
+<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Laptop</button>
+<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Phone</button>
+<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Accessory</button>
+<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">debris</button>
+<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Parts</button>
+</div>
+
+
+
+
+
+<!-- <input class="btn btn-light" type="button" value="button">
+<input class="btn btn-light" type="button" value="button">
+<input class="btn btn-light" type="button" value="button"> -->
+
+
+
+
+			<!-- <h4>Device type</h4>
+            <p>Please choose your device type.</p><br/>
+                <form action ="/action_page.php">
+					<select required>
+                        <option value="">Choose an option</option>
+						<option value="computer">Computer</option>
+						<option value="laptop">Laptop</option>
+						<option value="phone">Phone</option>
+						<option value="accessory">Accessory</option>
+						<option value="debris">Debris</option>
+                        <option value="parts">Parts</option>
+                    </select><br/><br/>
+					<a href = "#" id = "submit1"><input type = "submit" value = "Submit"/></a>
+					<input type = "reset" value = "Reset"/><br/><br/>
+					<br/><br/>
+            </form> -->
+
+			<div id="personalInfo">
+			<form>
+				<fieldset>
+					<h4>Your Personal Info</h4><br/>
+					Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+					Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # (if applicable) and Street #" required /><br/><br/><br/>
+					Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+					Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+					Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+					</textarea><br/><br/>
+					<a href = "#" id = "submit2"><input type = "submit" value = "Submit"/></a>
+                    <input type = "reset" value = "Reset"/>
+				</fieldset>
+			</form>
+		</div>
 
 			<div id="typeInfo">
 				<form>
