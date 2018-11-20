@@ -81,33 +81,35 @@
 	#about {
 		font-size: 1.4em;
 	}
-  #logo{
-    width: 30%;
-	  float: left;
-  }
-
-	#devices{
-		width: 30%;
-		display: block;
-		text-align: center;
-		margin-right: 10px;
-		float: left;
-	}
-
-	#deviceInfo {
-		width: auto;
-		margin-bottom: 20px;
-		padding:5px;
-    height: 130px;
-		position: relative;
-    background-color: grey;
-	}
-
-	#tslshow {
-		position:absolute;
-		left:0;
-		width:1200px;
-	}
+    #logo{
+        width: 30%;
+        float: left;
+    }
+    #device1{
+        width: 70%;
+        height: 55%;
+        margin-bottom: 10px;
+        filter: opacity(25%);
+    }
+    #device2, #device3, #device5{
+        width: 70%;
+        height: 55%;
+        margin-bottom: 10px;
+        filter: opacity(30%);
+    }
+    #device4{
+        width: 80%;
+        height: 60%;
+        margin-bottom: 4px;
+        filter: opacity(30%);
+    }
+    #device6{
+        width: 80%;
+        height: 65%;
+        margin-bottom: -3px;
+        filter: opacity(30%);
+    }
+    }
 
 	#leftArrow {
 		width:40px;
@@ -185,6 +187,8 @@
  	display: block;
  	clear: both;
  	width: 50%;
+    margin-left: 50px;
+    margin: 5%;
  }
 </style>
 </head>
@@ -201,54 +205,16 @@
 		<h1 class = "middletext">Salvage Your E-devices Instantly</h1>
 	</div>
 
+        <div id="deviceInfo">
+            <button class="btn btn-light" type="button"><img src = "computericon.png" id = "device1"><br/>Computer</button>
+            <button class="btn btn-light" type="button"><img src = "laptopicon.png" id = "device2"><br/>Laptop</button>
+            <button class="btn btn-light" type="button"><img src = "cellphoneicon.png" id = "device3"><br/>Phone</button>
+            <button class="btn btn-light" type="button"><img src = "accessoriesicon.png" id = "device4"><br/>Accessory</button>
+            <button class="btn btn-light" type="button"><img src = "debrisicon.png" id = "device5"><br/>Debris</button>
+            <button class="btn btn-light" type="button"><img src = "partsicon.png" id = "device6"><br/>Parts</button>
+        </div>
 
-		<!--Add additional information in this section -->
-		<div class="fields">
-
-  		<div id="deviceInfo">
-				<div id="rightArrow"></div>
-				<div id="viewContainer">
-					<div id="tslshow">
-					<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Computer</button>
-					<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Laptop</button>
-					<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Phone</button>
-					<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Accessory</button>
-					<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Debris</button>
-					<button class="btn btn-light" type="button"><img src = "logo.png" id = "devices">Parts</button>
-				</div>
-	     </div>
-				<div id="leftArrow"></div>
-			</div>
-
-
-
-
-
-<!-- <input class="btn btn-light" type="button" value="button">
-<input class="btn btn-light" type="button" value="button">
-<input class="btn btn-light" type="button" value="button"> -->
-
-
-
-
-			<!-- <h4>Device type</h4>
-            <p>Please choose your device type.</p><br/>
-                <form action ="/action_page.php">
-					<select required>
-                        <option value="">Choose an option</option>
-						<option value="computer">Computer</option>
-						<option value="laptop">Laptop</option>
-						<option value="phone">Phone</option>
-						<option value="accessory">Accessory</option>
-						<option value="debris">Debris</option>
-                        <option value="parts">Parts</option>
-                    </select><br/><br/>
-					<a href = "#" id = "submit1"><input type = "submit" value = "Submit"/></a>
-					<input type = "reset" value = "Reset"/><br/><br/>
-					<br/><br/>
-            </form> -->
-
-			<div id="personalInfo">
+        <div id="personalInfo">
 			<form>
 				<fieldset>
 					<h4>Your Personal Info</h4><br/>
@@ -256,7 +222,7 @@
 					Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # (if applicable) and Street #" required /><br/><br/><br/>
 					Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
 					Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
-					Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+					Any Additional Information:<br/><textarea name = "description" rows = "10" cols = "50">
 					</textarea><br/><br/>
 					<a href = "#" id = "submit2"><input type = "submit" value = "Submit"/></a>
                     <input type = "reset" value = "Reset"/>
@@ -370,20 +336,10 @@
 </form>
 </div> -->
 
-<div id="personalInfo">
-<form>
-	<fieldset>
-		<h4>Your Personal Info</h4><br/>
-		Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
-		Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
-		Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
-		Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
-		Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
-		</textarea><br/><br/>
-		<a href = "#" id = "button1">Submit</a>
-	</fieldset>
-</form>
-</div>
+
+
+
+<!--
 
 <div id = "tableOfDevices">
 	<table>
@@ -407,7 +363,7 @@
 		</tr>
 	</table>
 </div>
-
+ -->
 <!-- <div id="deviceInfo">
 <h4>Device type</h4>
 		<p>Please choose your device type.</p><br/>
@@ -443,7 +399,7 @@
 </form>
 </div> -->
 
-</div>
+
 
 
 
@@ -487,22 +443,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<script type = "text/javascript" src = "indexjs.js"></script>
-	<script type = "text/javascript" src = "scroll.js"></script>
-	<script>		//Goes to the top page when hit refresh.
+
+	<script>		
+
+	//Goes to the top page when hit refresh.
 		window.onbeforeunload = function () {
   		window.scrollTo(0, 0);
 		}
-	</script>
-	<script>
 
-		//Goes to the top page when hit refresh.
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
-
-
+//button select functions
+		$(".btn-group > .btn").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+});
 
 	</script>
+
 
 
 </body>
