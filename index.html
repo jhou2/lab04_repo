@@ -129,26 +129,24 @@
 		<!--Add additional information in this section -->
 		<div class="fields">
 
-<div id="deviceInfo">
-	<form>
-		<fieldset>
+            <div id="deviceInfo">
 			<h4>Device type</h4>
             <p>Please choose your device type.</p><br/>
-					<select name="device">
-						<option value="">Choose an option</option>
-						<option value="computer" required>Computer</option>
-						<option value="laptop" required>Laptop</option>
-						<option value="phone" required>Phone</option>
-						<option value="accessory" required>Accessory</option>
-						<option value="debris" required>Debris</option>
-                        <option value="parts" required>Parts</option>
-					</select><br/><br/>
+                <form action ="/action_page.php">
+					<select required>
+                        <option value="">Choose an option</option>
+						<option value="computer">Computer</option>
+						<option value="laptop">Laptop</option>
+						<option value="phone">Phone</option>
+						<option value="accessory">Accessory</option>
+						<option value="debris">Debris</option>
+                        <option value="parts">Parts</option>
+                    </select><br/><br/>
 					<a href = "#" id = "submit1"><input type = "submit" value = "Submit"/></a>
 					<input type = "reset" value = "Reset"/><br/><br/>
 					<br/><br/>
-		</fieldset>
-	</form>
-</div>
+                </form>
+            </div>
 
 			<div id="personalInfo">
 			<form>
@@ -211,7 +209,7 @@
 
 	<script type = "text/javascript" src = "indexjs.js"></script>
 	<script>
-
+    
 		//Goes to the top page when hit refresh.
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
