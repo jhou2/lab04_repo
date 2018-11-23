@@ -164,36 +164,47 @@
 	height: 130px;
 	margin: 140px; 
  }
- #modelInfo-computer-brand1{
+ #modelInfo-computer-brand1, #modelInfo-computer-brand2, #modelInfo-computer-brand3, #modelInfo-computer-brand4, #modelInfo-computer-brand5{
     width: 130px;
 	display: inline;
 	height: 130px;
 	margin: 140px;         
  }
- #modelInfo-computer-brand2{
+ #brandInfo-laptop{
     width: 130px;
 	display: inline;
 	height: 130px;
-	margin: 140px;         
- }
- #modelInfo-computer-brand3{
+	margin: 140px; 
+    border-top: 10px;
+}
+ #modelInfo-laptop-brand1, #modelInfo-laptop-brand2, #modelInfo-laptop-brand3, #modelInfo-laptop-brand4, #modelInfo-laptop-brand5{
     width: 130px;
 	display: inline;
 	height: 130px;
-	margin: 140px;         
+	margin: 140px;      
  }
- #modelInfo-computer-brand4{
+ #brandInfo-phone{
     width: 130px;
 	display: inline;
 	height: 130px;
-	margin: 140px;         
+	margin: 140px; 
  }
- #modelInfo-computer-brand5{
+ #modelInfo-phone-brand1,#modelInfo-phone-brand2, #modelInfo-phone-brand3, #modelInfo-phone-brand4, #modelInfo-phone-brand5{
+     display: inline;
+     margin: 140px; 
+ }
+ #brandInfo-accessory{
     width: 130px;
 	display: inline;
 	height: 130px;
-	margin: 140px;         
+	margin: 140px;     
  }
+#modelInfo-accessory-brand1, #modelInfo-accessory-brand2, #modelInfo-accessory-brand3, #modelInfo-accessory-brand4, #modelInfo-accessory-brand5{
+    width: 130px;
+	display: inline;
+	height: 130px;
+	margin: 140px;
+ }     
 .btn {
     margin-right: 30px;
         }
@@ -250,7 +261,7 @@
 	  <button class="btn btn-light computer-model-btn" id="computer-brand1-model3" type="button">C-b1-model3</button>
 	  <button class="btn btn-light computer-model-btn" id="computer-brand1-model4" type="button">C-b1-model4</button>
 	  <button class="btn btn-light computer-model-btn" id="computer-brand1-model5" type="button">C-b1-model5</button>
-</div><br/>
+</div>
 
 <div id="modelInfo-computer-brand2" class="btn-group">
 	  <button class="btn btn-light computer-model-btn" id="computer-brand2-model1" type="button">C-b2-model1</button>
@@ -258,7 +269,7 @@
 	  <button class="btn btn-light computer-model-btn" id="computer-brand2-model3" type="button">C-b2-model3</button>
 	  <button class="btn btn-light computer-model-btn" id="computer-brand2-model4" type="button">C-b2-model4</button>
 	  <button class="btn btn-light computer-model-btn" id="computer-brand2-model5" type="button">C-b2-model5</button>
-</div><br/>
+</div>
 
 <div id="modelInfo-computer-brand3" class="btn-group">
 	  <button class="btn btn-light computer-model-btn" id="computer-brand3-model1" type="button">C-b3-model1</button>
@@ -292,7 +303,7 @@
 	  <button class="btn btn-light laptop-brand-btn" id="laptop-brand3" type="button">laptop-brand3</button>
 	  <button class="btn btn-light laptop-brand-btn" id="laptop-brand4" type="button">laptop-brand4</button>
 	  <button class="btn btn-light laptop-brand-btn" id="laptop-brand5" type="button">laptop-brand5</button>
-</div>
+</div><br/><br/>
 
 <!--laptop model buttons set-->
 
@@ -341,12 +352,12 @@
  <!--Phone brand 1~5 -->
 
 <div id="brandInfo-phone" class="btn-group">
-	  <button class="btn btn-light phone-brand-btn" id="phone-brand1" type="button">phone-brand1</button>
-	  <button class="btn btn-light phone-brand-btn" id="phone-brand2" type="button">phone-brand2</button>
-	  <button class="btn btn-light phone-brand-btn" id="phone-brand3" type="button">phone-brand3</button>
-	  <button class="btn btn-light phone-brand-btn" id="phone-brand4" type="button">phone-brand4</button>
-	  <button class="btn btn-light phone-brand-btn" id="phone-brand5" type="button">phone-brand5</button>
-</div>
+	  <button class="btn btn-light phone-brand-btn" id="phone-brand1" type="button">Apple</button>
+	  <button class="btn btn-light phone-brand-btn" id="phone-brand2" type="button">Samsung</button>
+	  <button class="btn btn-light phone-brand-btn" id="phone-brand3" type="button">Huawei</button>
+	  <button class="btn btn-light phone-brand-btn" id="phone-brand4" type="button">HTC</button>
+	  <button class="btn btn-light phone-brand-btn" id="phone-brand5" type="button">Nokia</button>
+</div><br/><br/>
 
 <!--Phone model buttons set-->
 
@@ -397,12 +408,12 @@
   <!--Accessory brand 1~5 -->
 
 	<div id="brandInfo-accessory" class="btn-group">
-		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand1" type="button">acc-brand1</button>
-		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand2" type="button">acc-brand2</button>
-		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand3" type="button">acc-brand3</button>
-		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand4" type="button">acc-brand4</button>
-		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand5" type="button">acc-brand5</button>
-	</div>
+		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand1" type="button">Key board</button>
+		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand2" type="button">Mouse</button>
+		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand3" type="button">Speaker</button>
+		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand4" type="button">Printer</button>
+		  <button class="btn btn-light accessory-brand-btn" id="accessory-brand5" type="button">Routers</button>
+	</div><br/><br/>
 
 <!--model buttons set 1-->
 
