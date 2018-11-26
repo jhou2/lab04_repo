@@ -64,7 +64,7 @@
 	#homepage{
 		float: left;
 		text-align: center;
-        margin-top: 20px;
+        margin-top: 13px;
         margin-left: 10px;
         font-size: 1.5em;
 
@@ -89,31 +89,26 @@
         width: 30%;
         float: left;
     }
-    #device1{
+    #img1{
         width: 70%;
         height: 55%;
         margin-bottom: 10px;
         filter: opacity(25%);
     }
-    #device2, #device3 {
+    #img2, #img3{
         width: 70%;
         height: 55%;
         margin-bottom: 10px;
         filter: opacity(30%);
     }
-    #device4{
+    #img4{
         width: 80%;
         height: 60%;
         margin-bottom: 4px;
         filter: opacity(30%);
     }
-    #device5{
-        width: 80%;
-        height: 65%;
-        margin-bottom: -3px;
-        filter: opacity(30%);
-    }
-    }
+
+
 
 
 	/* Table of Devices*/
@@ -155,15 +150,48 @@
 	}
 
 
- .btn{
+ .deviceBtn{
 	width: 130px;
-	display: inline;
 	height: 130px;
 	margin: 40px;
-	float: left;
+	/*float: left;*/
  }
  #deviceInfo {
  	margin: 10px 10%;
+
+
+ }
+ #brandInfo{
+    width: 130px;
+	margin-left: 140px;
+ }
+ #modelInfo{
+	margin-left: 140px;
+ }
+ #brandInfo-laptop{
+	margin-left: 140px;
+}
+ #modelInfo-laptop-brand1, #modelInfo-laptop-brand2, #modelInfo-laptop-brand3, #modelInfo-laptop-brand4, #modelInfo-laptop-brand5{
+	margin-left: 140px;
+ }
+ #brandInfo-phone{
+	margin-left: 140px;
+ }
+ #modelInfo-phone-brand1,#modelInfo-phone-brand2, #modelInfo-phone-brand3, #modelInfo-phone-brand4, #modelInfo-phone-brand5{
+     margin-left: 140px;
+ }
+ #brandInfo-accessory{
+	margin-left: 140px;
+ }
+#modelInfo-accessory-brand1, #modelInfo-accessory-brand2, #modelInfo-accessory-brand3, #modelInfo-accessory-brand4, #modelInfo-accessory-brand5{
+	margin-left: 140px;
+ }
+.btn {
+    margin-right: 30px;
+        }
+ #deviceInfo img {
+ 	width: 100px;
+ 	height: 70px;
  }
  #personalInfo {
  	display: block;
@@ -172,6 +200,35 @@
     margin-left: 50px;
     margin: 5%;
  }
+
+ .none {
+ 	display: none;
+  }
+
+/* faq section */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
 </style>
 </head>
 <body>
@@ -188,14 +245,34 @@
 	</div>
 
         <div id="deviceInfo" class="btn-group">
-            <button class="btn btn-light" type="button" id = "button1"> <img src = "computericon.png" id = "device1"><br/>Computer</button>
-            <button class="btn btn-light" type="button" id = "button2"><img src = "laptopicon.png" id = "device2"><br/>Laptop</button>
-            <button class="btn btn-light" type="button" id = "button3"><img src = "cellphoneicon.png" id = "device3"><br/>Phone</button>
-            <button class="btn btn-light" type="button" id = "button4"><img src = "accessoriesicon.png" id = "device4"><br/>Accessory</button>
-            <button class="btn btn-light" type="button" id = "button5"><img src = "partsicon.png" id = "device5"><br/>Parts</button>
-        </div>
+            <button class="btn btn-light deviceBtn" id="device-btn1" type="button" ><img src = "computericon.png" id = "img1"><br/>Computer</button>
+            <button class="btn btn-light deviceBtn" id="device-btn2" type="button"><img src = "laptopicon.png" id = "img2"><br/>Laptop</button>
+            <button class="btn btn-light deviceBtn" id="device-btn3" type="button"><img src = "cellphoneicon.png" id = "img3"><br/>Phone</button>
+            <button class="btn btn-light deviceBtn" id="device-btn4" type="button"><img src = "accessoriesicon.png" id = "img4"><br/>Accessory</button>
+        </div><br/>
 
-        <div id="personalInfo">
+
+  <!--Computer brand 1~5 -->
+
+<div id="brandInfo" class="btn-group">
+	  <button class="btn btn-light computer-brand-btn" id="brand1" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand2" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand3" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand4" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand5"  type="button"></button>
+</div><br/><br/>
+
+<div id="modelInfo" class="btn-group">
+	<button class="btn btn-light computer-model-btn" id="model1" type="button">C-b1-model1</button>
+	<button class="btn btn-light computer-model-btn" id="model2" type="button">C-b1-model2</button>
+	<button class="btn btn-light computer-model-btn" id="model3" type="button">C-b1-model3</button>
+	<button class="btn btn-light computer-model-btn" id="model4" type="button">C-b1-model4</button>
+	<button class="btn btn-light computer-model-btn" id="model5" type="button">C-b1-model5</button>
+</div>
+<!--Computer model buttons set -->
+
+
+     <div id="personalInfo">
 			<form>
 				<fieldset>
 					<h4>Your Personal Info</h4><br/>
@@ -211,7 +288,98 @@
 			</form>
 		</div>
 
-		<div id="brandInfo">
+	<!-- Second Image with Add Whatever -->
+	<div class="bgimg-2">
+		<h1 class = "middletext">How We PROCESS?</h1>
+	</div>
+	<!-- Second contents-->
+	<div class="fields" id="content2">
+		<h2>Salvaging</h2>
+		<p>We collect devices from customers and check if all the parts are exist. If there is no problem with parts, we test the devices to see it works properly or not then, all the parts are separted individually and orginzed by its categories. We make sure all the memoris stored in the device is all deleted in this process.</p><br/><br/>
+        <h2 style = "text-align: center">FAQ</h2>
+        <button class="accordion">How do I send my device?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">How long does it take for me to get paid once you've received my device?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">What do I need to include with the phone when I send it to your company?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+    </div>
+
+	<!-- Theid Image with Add Whatever -->
+	<div class="bgimg-3">
+		<h1 class = "middletext"></h1>
+	</div>
+	<!-- Third contents-->
+	<!-- About us content-->
+
+	<div id="content3" class="fields">
+		<h2 id="point">ABOUT US</h2>
+		<p><em>Contact Information</em></p>
+		<p>Address<br>Willingdon St, Burnaby, BC</p>
+		<p>Email<br>greenplus@gmail.com</p>
+		<p>Phone<br>604-123-4567</p>
+</div>
+
+	<!-- footer -->
+	<footer class="fields">
+		<p>Made by Jessica, Sunny, Chris</p><br/>
+        <p class="copyright">@Copyright 2018 by Green+. All Rights Reserved.</p>
+	</footer>
+ 	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script type = "text/javascript" src = "indexjs.js"></script>
+
+	<script>
+
+	//Goes to the top page when hit refresh.
+		window.onbeforeunload = function () {
+  		window.scrollTo(0, 0);
+		}
+
+//button select functions
+		$(".btn-group > .btn").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+});
+
+	</script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+
+
+</body>
+</html>
+
+<!--code not in use-------------------------------->
+
+<!-- <div id="phoneBrandInfo">
 		<form>
 			<fieldset>
 				<h4>Model type</h4><br/>
@@ -228,27 +396,6 @@
 		</form>
 	</div>
 
-<!--	<div id="computerBrandInfo">
-	<form>
-		<fieldset>
-			<h4>Model type</h4><br/>
-					<select name="Brand" required>
-						<option value="">---</option>
-						<option value="Apple" required>Apple</option>
-						<option value="Samsung" required>Samsung</option>
-						<option value="HuaWei" required>HuaWei</option>
-						<option value="Lenovo" required>Lenovo</option>
-						<option value="LG" required>LG</option>
-						<option value="ZTE" required>ZTE</option>
-						<option value="Blackberry" required>Blackberry</option>
-						<option value="Nokia" required>Nokia</option>
-						<option value="Sony" required>Sony</option>
-					</select><br/><br/>
-					<a href = "#" id = "submit1">Submit</a>
-					<br/><br/>
-		</fieldset>
-	</form>
-	</div>
 
 	<div id="modelInfo">
 	<form>
@@ -357,67 +504,3 @@
 </fieldset>
 </form>
 </div> -->
-
-
-
-
-
-
-
-
-	<!-- Second Image with Add Whatever -->
-	<div class="bgimg-2">
-		<h1 class = "middletext">How We PROCESS?</h1>
-	</div>
-	<!-- Second contents-->
-	<div class="fields" id="content2">
-		<h2>Salvaging</h2>
-		<p>We collect devices from customers and check if all the parts are exist. If there is no problem with parts, we test the devices to see it works properly or not then, all the parts are separted individually and orginzed by its categories. We make sure all the memoris stored in the device is all deleted in this process.<br/>blahblah<br/><br/><br/><br/><br/><br/><br/> </p>
-	</div>
-
-	<!-- Theid Image with Add Whatever -->
-	<div class="bgimg-3">
-		<h1 class = "middletext"></h1>
-	</div>
-	<!-- Third contents-->
-	<!-- About us content-->
-
-	<div id="content3" class="fields">
-		<h2 id="point">ABOUT US</h2>
-		<p><em>Contact Information</em></p>
-		<p>Address<br>Willingdon St, Burnaby, BC</p>
-		<p>Email<br>greenplus@gmail.com</p>
-		<p>Phone<br>604-123-4567</p>
-</div>
-
-	<!-- footer -->
-	<footer class="fields">
-		<p>Made by Jessica, Sunny, Chris</p><br/>
-        <p class="copyright">@Copyright 2018 by Green+. All Rights Reserved.</p>
-	</footer>
- 	<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-	<script type = "text/javascript" src = "indexjs.js"></script>
-
-	<script>
-
-	//Goes to the top page when hit refresh.
-		window.onbeforeunload = function () {
-  		window.scrollTo(0, 0);
-		}
-
-//button select functions
-		$(".btn-group > .btn").click(function(){
-    $(this).addClass("active").siblings().removeClass("active");
-});
-
-	</script>
-
-
-
-</body>
-</html>
