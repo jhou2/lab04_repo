@@ -200,7 +200,32 @@
 
  .none {
  	display: none;
- }
+  }
+        
+/* faq section */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
 </style>
 </head>
 <body>
@@ -267,8 +292,24 @@
 	<!-- Second contents-->
 	<div class="fields" id="content2">
 		<h2>Salvaging</h2>
-		<p>We collect devices from customers and check if all the parts are exist. If there is no problem with parts, we test the devices to see it works properly or not then, all the parts are separted individually and orginzed by its categories. We make sure all the memoris stored in the device is all deleted in this process.<br/>blahblah<br/><br/><br/><br/><br/><br/><br/> </p>
-	</div>
+		<p>We collect devices from customers and check if all the parts are exist. If there is no problem with parts, we test the devices to see it works properly or not then, all the parts are separted individually and orginzed by its categories. We make sure all the memoris stored in the device is all deleted in this process.</p><br/><br/>
+        <h2 style = "text-align: center">FAQ</h2>
+        <button class="accordion">How do I send my device?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">How long does it take for me to get paid once you've received my device?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">What do I need to include with the phone when I send it to your company?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+    </div>
 
 	<!-- Theid Image with Add Whatever -->
 	<div class="bgimg-3">
@@ -311,6 +352,22 @@
 });
 
 	</script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+        }
+    </script>
 
 
 
