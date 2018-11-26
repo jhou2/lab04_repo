@@ -77,6 +77,10 @@
 		display: inline;
 	}
 
+	#brandInfo {
+		margin: 40px;
+	}
+
 	/* About Section */
 	#about {
 		font-size: 1.4em;
@@ -91,7 +95,7 @@
         margin-bottom: 10px;
         filter: opacity(25%);
     }
-    #device2, #device3, #device5{
+    #device2, #device3 {
         width: 70%;
         height: 55%;
         margin-bottom: 10px;
@@ -103,7 +107,7 @@
         margin-bottom: 4px;
         filter: opacity(30%);
     }
-    #device6{
+    #device5{
         width: 80%;
         height: 65%;
         margin-bottom: -3px;
@@ -111,33 +115,6 @@
     }
     }
 
-	#leftArrow {
-		width:40px;
-		height:40px;
-		background:#ff0000;
-		position:absolute;
-		left:0px;
-		vertical-align: middle;
-	}
-
-	#rightArrow {
-		width:40px;
-		height:40px;
-		background:#ff0000;
-		position:absolute;
-		right:0px;
-		vertical-align: middle;
-	}
-
-	#viewContainer {
-		width:360px;
-		height:120px;
-		background:#00ff00;
-		position:absolute;
-		left:50%;
-		margin-left:-180px;
-		overflow:hidden;
-	}
 
 	/* Table of Devices*/
 	#tableOfDevices {
@@ -179,10 +156,15 @@
 
 
  .btn{
-	width: 100px;
-	height: 100px;
+	width: 130px;
+	display: inline;
+	height: 130px;
+	margin: 40px;
+	float: left;
  }
-
+ #deviceInfo {
+ 	margin: 10px 10%;
+ }
  #personalInfo {
  	display: block;
  	clear: both;
@@ -205,13 +187,12 @@
 		<h1 class = "middletext">Salvage Your E-devices Instantly</h1>
 	</div>
 
-        <div id="deviceInfo">
-            <button class="btn btn-light" type="button"><img src = "computericon.png" id = "device1"><br/>Computer</button>
-            <button class="btn btn-light" type="button"><img src = "laptopicon.png" id = "device2"><br/>Laptop</button>
-            <button class="btn btn-light" type="button"><img src = "cellphoneicon.png" id = "device3"><br/>Phone</button>
-            <button class="btn btn-light" type="button"><img src = "accessoriesicon.png" id = "device4"><br/>Accessory</button>
-            <button class="btn btn-light" type="button"><img src = "debrisicon.png" id = "device5"><br/>Debris</button>
-            <button class="btn btn-light" type="button"><img src = "partsicon.png" id = "device6"><br/>Parts</button>
+        <div id="deviceInfo" class="btn-group">
+            <button class="btn btn-light" type="button" id = "button1"> <img src = "computericon.png" id = "device1"><br/>Computer</button>
+            <button class="btn btn-light" type="button" id = "button2"><img src = "laptopicon.png" id = "device2"><br/>Laptop</button>
+            <button class="btn btn-light" type="button" id = "button3"><img src = "cellphoneicon.png" id = "device3"><br/>Phone</button>
+            <button class="btn btn-light" type="button" id = "button4"><img src = "accessoriesicon.png" id = "device4"><br/>Accessory</button>
+            <button class="btn btn-light" type="button" id = "button5"><img src = "partsicon.png" id = "device5"><br/>Parts</button>
         </div>
 
         <div id="personalInfo">
@@ -230,24 +211,7 @@
 			</form>
 		</div>
 
-			<!-- <div id="typeInfo">
-				<form>
-						<h4>Device type</h4><br/>
-								<select id = "selectType" required>
-									<option value="">---</option>
-									<option value="Computer">Computer</option>
-									<option value="Laptop">Laptop</option>
-									<option value="Phone">Phone</option>
-									<option value="Accessory">Accessory</option>
-									<option value="Debris">Debris</option>
-			            <option value="Parts">Parts</option>
-								</select><br/><br/>
-								<a href = "#" id = "submit1">Submit</a>
-								<br/><br/>
-				</form>
-			</div> -->
-
-		<!-- <div id="phoneBrandInfo">
+		<div id="brandInfo">
 		<form>
 			<fieldset>
 				<h4>Model type</h4><br/>
@@ -256,12 +220,7 @@
 							<option value="Apple" required>Apple</option>
 							<option value="Samsung" required>Samsung</option>
 							<option value="HuaWei" required>HuaWei</option>
-							<option value="Lenovo" required>Lenovo</option>
 							<option value="LG" required>LG</option>
-							<option value="ZTE" required>ZTE</option>
-							<option value="Blackberry" required>Blackberry</option>
-							<option value="Nokia" required>Nokia</option>
-							<option value="Sony" required>Sony</option>
 						</select><br/><br/>
 						<a href = "#" id = "submit1">Submit</a>
 						<br/><br/>
@@ -269,7 +228,7 @@
 		</form>
 	</div>
 
-	<div id="computerBrandInfo">
+<!--	<div id="computerBrandInfo">
 	<form>
 		<fieldset>
 			<h4>Model type</h4><br/>
@@ -444,7 +403,7 @@
 
 	<script type = "text/javascript" src = "indexjs.js"></script>
 
-	<script>		
+	<script>
 
 	//Goes to the top page when hit refresh.
 		window.onbeforeunload = function () {

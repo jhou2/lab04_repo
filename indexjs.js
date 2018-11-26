@@ -1,22 +1,42 @@
 $('#personalInfo').hide();
-$('#brandInfo-computer').hide();
-$('#brandInfo-phone').hide();
+// $('#brandInfo-computer').hide();
+// $('#brandInfo-phone').hide();
+$('#brandInfo').hide();
 
 
-$('#submit1').click(function(e){
- // $('#deviceInfo').hide();
- if ($('#')) {}
-  $('#brandInfo-computer').toggle();
-  e.preventDefault();
-});
-
-$('#submit2').click(function(e){
+$('#button1').click(function(e){
   $('#deviceInfo').hide();
-  $('#brandInfo').hide();
-
-  $('#personalInfo').toggle();
+  $('#brandInfo').toggle();
   e.preventDefault();
 });
+
+$('#button2').click(function(e){
+  $('#deviceInfo').hide();
+  $('#brandInfo').toggle();
+  // $('#personalInfo').toggle();
+  e.preventDefault();
+});
+
+$('#button3').click(function(e){
+  $('#deviceInfo').hide();
+  $('#brandInfo').toggle();
+  e.preventDefault();
+});
+
+$('#button4').click(function(e){
+  $('#deviceInfo').hide();
+  $('#brandInfo').toggle();
+  // $('#personalInfo').toggle();
+  e.preventDefault();
+});
+
+$('#button5').click(function(e){
+  $('#deviceInfo').hide();
+  $('#brandInfo').toggle();
+  e.preventDefault();
+});
+
+
 
 // var view = $("#tslshow");
 // var move = "100px";
