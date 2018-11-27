@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-$('#personalInfo').hide();
-// $('#brandInfo-computer').hide();
-// $('#brandInfo-phone').hide();
-$('#brandInfo').hide();
-=======
 // $('#personalInfo').hide();
 //
 // $('#brandInfo-computer').hide();
@@ -157,7 +151,7 @@ for (let k = 0; k < 4; k++) {
 	let deviceBtn = $('#device-btn' + (k + 1));
 	deviceBtn.on('click', function() {
 		// Assign buttons to brand button on index html
-		$('#brandInfo').toggle();
+		$('#brandInfo').show();
 		for(let j = 0; j < 5; j++) {
 			let brand = list[k].brand[j];
 			let brandBtn = $('#brand' + (j + 1));
@@ -406,21 +400,6 @@ for (let k = 0; k < 4; k++) {
 // });
 
 
-
-
-
-
-
-
-
-
-
-
->>>>>>> 2781f4a7d422861311b2be1cb9777669c8345a0b
-
-//Code not in use------------------------------------------
-
-<<<<<<< HEAD
 $('#button1').click(function(e){
   $('#deviceInfo').hide();
   $('#brandInfo').toggle();
@@ -452,10 +431,6 @@ $('#button5').click(function(e){
   $('#brandInfo').toggle();
   e.preventDefault();
 });
-=======
-
-
->>>>>>> 2781f4a7d422861311b2be1cb9777669c8345a0b
 
 
 
