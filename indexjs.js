@@ -103,10 +103,14 @@ for (let k = 0; k < 4; k++) {
 						console.log(deviceBtn.text() + brandBtn.text() + userModel);
 					})
 				}
+
 			});
 		}
 	});
 }
+
+
+
 
 
 // if the computer button is clicked
