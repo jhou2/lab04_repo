@@ -166,17 +166,15 @@
  .deviceBtn{
 	width: 130px;
 	height: 130px;
-	margin-top: 20px;
+	margin: 40px;
 	/*float: left;*/
  }
  #deviceInfo {
-	 width: 637px;
-	 margin-right: auto;
-	 margin-left: 60px;
+ 	margin: 10px 10%;
 
  }
  #brandInfo{
-	margin-left: 60px;
+	margin-left: 140px;
  }
  #modelInfo{
 	margin-left: 140px;
@@ -206,7 +204,13 @@
  	width: 100px;
  	height: 70px;
  }
-
+ #personalInfo {
+ 	display: block;
+ 	clear: both;
+ 	width: 50%;
+    margin-left: 50px;
+    margin: 5%;
+ }
 
  .none {
  	display: none;
@@ -235,6 +239,148 @@
     display: none;
     background-color: #F5F5F5;
     overflow: hidden;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+/* * {
+  box-sizing: border-box;
+} */
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.whole {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  /* background-color: #4CAF50;
+  color: white; */
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  /* background-color: #45a049; */
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
 }
 </style>
 </head>
@@ -278,6 +424,120 @@
 </div>
 
 
+
+
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+  <span class="close">&times;</span>
+
+  	<div id = "modelsearch">
+		Model: <input class = "textfield" type = "search" name = "modelType" title = "modelofdevice" placeholder = "Enter Your Model" required/><br/><br/>
+	</div>
+
+		<div id="personalInfo">
+		 <form action = "file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/mobileformpage.html">
+			 <fieldset>
+				 <h4>Your Personal Info</h4><br/>
+				 Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+				 Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # (if applicable) and Street #" required /><br/><br/><br/>
+				 Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+				 Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+				 Any Additional Information:<br/><textarea name = "description" rows = "10" cols = "50">
+				 </textarea><br/><br/>
+				 <a href = "#" id = "submit2"><input type = "submit" value = "Submit"/></a>
+									 <input type = "reset" value = "Reset"/>
+			 </fieldset>
+		 </form>
+	 </div>
+
+
+
+
+	 <div class="row">
+	   <div class="col-75">
+	     <div class="whole">
+	       <form>
+	         <h2>Payment Information</h2>
+	         <div class="row">
+	           <div class="col-50">
+	             <h3>Billing Address</h3>
+	             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+	             <input type="text" id="fname" name="firstname" placeholder="First and Last Name">
+	             <label for="phonenumber"><i class="fas fa-phone"></i> Phone Number</label>
+	             <input type="text" id="phone" name="phone" placeholder="XXX-XXX-XXXX">
+	             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+	             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+	             <label for="city"><i class="fa fa-institution"></i> City</label>
+	             <input type="text" id="city" name="city" placeholder="Vancouver">
+
+	             <div class="row">
+	               <div class="col-50">
+	                 <label for="state">Province</label>
+	                 <input type="text" id="province" name="province" placeholder="BC">
+	               </div>
+	               <div class="col-50">
+	                 <label for="zip">Postal code</label>
+	                 <input type="text" id="postalcode" name="postalcode" placeholder="V5H 3H2">
+	               </div>
+	             </div>
+	           </div>
+
+	           <div class="col-50">
+	             <h3>Select How you would like to be paid</h3>
+	             <label for="fname">Accepted Methods</label>
+	             <div class="icon-container">
+	               <button onclick="myFunction1()" id="paypal" type="button" class="fab fa-cc-paypal fa-2x" style="color:blue"></button>
+	               <button onclick="myFunction2()" id="interac" type="button" class="fa fa-credit-card fa-2x" style="color:grey"></button>
+	               <button onclick="myFunction3()" type="button" class="fa fa-money-check-alt fa-2x"></button>
+	             </div>
+	             <div id = "addressbox">
+	                 <input type="text" id="emailadd" placeholder="Email Address">
+	             </div>
+	           </div>
+
+	         </div>
+	         <label>
+	           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+	         </label>
+	         <input type="submit" value="Continue to checkout" class="btn">
+	       </form>
+	     </div>
+	   </div>
+	   <div class="col-25">
+	     <div class="container">
+	       <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+	       <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+	       <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+	       <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+	       <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+	       <hr>
+	       <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+	     </div>
+	   </div>
+	 </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+  
 	<!-- Second Image with Add Whatever -->
 	<div class="bgimg-2">
 		<h1 class = "middletext">How We Process?</h1>
@@ -362,7 +622,45 @@
         }
     </script>
 
+		<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
 
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+		    modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+		</script>
+
+		<script>
+		   function myFunction3(){
+		       document.getElementById("emailadd").disabled = true;
+		   }
+		   function myFunction1() {
+		       document.getElementById("emailadd").disabled = false;
+		   }
+		   function myFunction2() {
+		       document.getElementById("emailadd").disabled = false;
+		   }
+		</script>
 
 </body>
 </html>
