@@ -1,4 +1,3 @@
-
 $('#brandInfo').css('display','none');
 $('#modelInfo').css('display','none');
 
@@ -84,8 +83,8 @@ let list = [{
 for (let k = 0; k < 4; k++) {
 	let deviceBtn = $('#device-btn' + (k + 1));
 	deviceBtn.on('click', function() {
-		// Assign buttons to brand button on index html
 		$('#brandInfo').show();
+		// Assign buttons to brand button on index html
 		for(let j = 0; j < 5; j++) {
 			let brand = list[k].brand[j];
 			let brandBtn = $('#brand' + (j + 1));
@@ -100,8 +99,8 @@ for (let k = 0; k < 4; k++) {
 					modelBtn.text(brand.model[i]);
 					modelBtn.on('click', function() {
 						userModel = modelBtn.text();
-						console.log(deviceBtn.text() + brandBtn.text() + userModel);
-					})
+						console.log(deviceBtn.text() + " " + brandBtn.text() + " " + userModel);
+					});
 				}
 			});
 		}
@@ -125,263 +124,18 @@ for (let k = 0; k < 4; k++) {
 // }
 // })
 
-<<<<<<< HEAD
-//	toggle computer-brand buttons
-
-// $('#computer-brand1').click(function(){
-// 	if ( $('#modelInfo-computer-brand2').is(':hidden')
-// 		&& $('#modelInfo-computer-brand3').is(':hidden')
-// 		&& $('#modelInfo-computer-brand4').is(':hidden')
-// 		&& $('#modelInfo-computer-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-computer-brand1').toggle();
-// }
-// })
-// $('#computer-brand2').click(function(){
-// 	if ( $('#modelInfo-computer-brand1').is(':hidden')
-// 		&& $('#modelInfo-computer-brand3').is(':hidden')
-// 		&& $('#modelInfo-computer-brand4').is(':hidden')
-// 		&& $('#modelInfo-computer-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-computer-brand2').toggle();
-// }
-// })
-// $('#computer-brand3').click(function(){
-// 	if ( $('#modelInfo-computer-brand1').is(':hidden')
-// 		&& $('#modelInfo-computer-brand2').is(':hidden')
-// 		&& $('#modelInfo-computer-brand4').is(':hidden')
-// 		&& $('#modelInfo-computer-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-computer-brand3').toggle();
-// }
-// })
-// $('#computer-brand4').click(function(){
-// 	if ( $('#modelInfo-computer-brand1').is(':hidden')
-// 		&& $('#modelInfo-computer-brand2').is(':hidden')
-// 		&& $('#modelInfo-computer-brand3').is(':hidden')
-// 		&& $('#modelInfo-computer-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-computer-brand4').toggle();
-// }
-// })
-// $('#computer-brand5').click(function(){
-// 	if ( $('#modelInfo-computer-brand1').is(':hidden')
-// 		&& $('#modelInfo-computer-brand2').is(':hidden')
-// 		&& $('#modelInfo-computer-brand3').is(':hidden')
-// 		&& $('#modelInfo-computer-brand4').is(':hidden')
-// 		) {
-// 	$('#modelInfo-computer-brand5').toggle();
-// }
-// })
-//
-// //	toggle laptop-brand buttons
-//
-// $('#laptop-brand1').click(function(){
-// 	if ( $('#modelInfo-laptop-brand2').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand3').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand4').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-laptop-brand1').toggle();
-// }
-// })
-// $('#laptop-brand2').click(function(){
-// 	if ( $('#modelInfo-laptop-brand1').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand3').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand4').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-laptop-brand2').toggle();
-// }
-// })
-// $('#laptop-brand3').click(function(){
-// 	if ( $('#modelInfo-laptop-brand1').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand2').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand4').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-laptop-brand3').toggle();
-// }
-// })
-// $('#laptop-brand4').click(function(){
-// 	if ( $('#modelInfo-laptop-brand1').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand2').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand3').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-laptop-brand4').toggle();
-// }
-// })
-// $('#laptop-brand5').click(function(){
-// 	if ( $('#modelInfo-laptop-brand1').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand2').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand3').is(':hidden')
-// 		&& $('#modelInfo-laptop-brand4').is(':hidden')
-// 		) {
-// 	$('#modelInfo-laptop-brand5').toggle();
-// }
-// })
-//
-//
-// //	toggle phone-brand buttons
-//
-// $('#phone-brand1').click(function(){
-// 	if ( $('#modelInfo-phone-brand2').is(':hidden')
-// 		&& $('#modelInfo-phone-brand3').is(':hidden')
-// 		&& $('#modelInfo-phone-brand4').is(':hidden')
-// 		&& $('#modelInfo-phone-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-phone-brand1').toggle();
-// }
-// })
-// $('#phone-brand2').click(function(){
-// 	if ( $('#modelInfo-phone-brand1').is(':hidden')
-// 		&& $('#modelInfo-phone-brand3').is(':hidden')
-// 		&& $('#modelInfo-phone-brand4').is(':hidden')
-// 		&& $('#modelInfo-phone-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-phone-brand2').toggle();
-// }
-// })
-// $('#phone-brand3').click(function(){
-// 	if ( $('#modelInfo-phone-brand1').is(':hidden')
-// 		&& $('#modelInfo-phone-brand2').is(':hidden')
-// 		&& $('#modelInfo-phone-brand4').is(':hidden')
-// 		&& $('#modelInfo-phone-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-phone-brand3').toggle();
-// }
-// })
-// $('#phone-brand4').click(function(){
-// 	if ( $('#modelInfo-phone-brand1').is(':hidden')
-// 		&& $('#modelInfo-phone-brand2').is(':hidden')
-// 		&& $('#modelInfo-phone-brand3').is(':hidden')
-// 		&& $('#modelInfo-phone-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-phone-brand4').toggle();
-// }
-// })
-// $('#phone-brand5').click(function(){
-// 	if ( $('#modelInfo-phone-brand1').is(':hidden')
-// 		&& $('#modelInfo-phone-brand2').is(':hidden')
-// 		&& $('#modelInfo-phone-brand3').is(':hidden')
-// 		&& $('#modelInfo-phone-brand4').is(':hidden')
-// 		) {
-// 	$('#modelInfo-phone-brand5').toggle();
-// }
-// })
-//
-// //	toggle Accessory-brand buttons
-//
-// $('#accessory-brand1').click(function(){
-// 	if ( $('#modelInfo-accessory-brand2').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand3').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand4').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-accessory-brand1').toggle();
-// }
-// })
-// $('#accessory-brand2').click(function(){
-// 	if ( $('#modelInfo-accessory-brand1').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand3').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand4').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-accessory-brand2').toggle();
-// }
-// })
-// $('#accessory-brand3').click(function(){
-// 	if ( $('#modelInfo-accessory-brand1').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand2').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand4').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-accessory-brand3').toggle();
-// }
-// })
-// $('#accessory-brand4').click(function(){
-// 	if ( $('#modelInfo-accessory-brand1').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand2').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand3').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand5').is(':hidden')
-// 		) {
-// 	$('#modelInfo-accessory-brand4').toggle();
-// }
-// })
-// $('#accessory-brand5').click(function(){
-// 	if ( $('#modelInfo-accessory-brand1').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand2').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand3').is(':hidden')
-// 		&& $('#modelInfo-accessory-brand4').is(':hidden')
-// 		) {
-// 	$('#modelInfo-accessory-brand5').toggle();
-// }
-// })
-=======
-
->>>>>>> 7a7c95632e6c926b1fd62bb743e6bcc7353b9c04
 
 
 
 
 
-<<<<<<< HEAD
-// $('#submit1').click(function(e){
-//  // $('#deviceInfo').hide();
-//  if ($('#')) {}
-//   $('#brandInfo-computer').toggle();
-//   e.preventDefault();
-// });
 
-// $('#submit2').click(function(e){
-//   $('#deviceInfo').hide();
-//   $('#brandInfo').hide();
-
-//   $('#personalInfo').toggle();
-//   e.preventDefault();
-// });
-
-
-$('#button1').click(function(e){
-  $('#deviceInfo').hide();
-  $('#brandInfo').toggle();
-  e.preventDefault();
-});
-
-$('#button2').click(function(e){
-  $('#deviceInfo').hide();
-  $('#brandInfo').toggle();
-  // $('#personalInfo').toggle();
-  e.preventDefault();
-});
-
-$('#button3').click(function(e){
-  $('#deviceInfo').hide();
-  $('#brandInfo').toggle();
-  e.preventDefault();
-});
-
-$('#button4').click(function(e){
-  $('#deviceInfo').hide();
-  $('#brandInfo').toggle();
-  // $('#personalInfo').toggle();
-  e.preventDefault();
-});
-
-$('#button5').click(function(e){
-  $('#deviceInfo').hide();
-  $('#brandInfo').toggle();
-  e.preventDefault();
-});
-=======
 
 
 
 
 //Code not in use------------------------------------------
 
->>>>>>> 7a7c95632e6c926b1fd62bb743e6bcc7353b9c04
 
 
 

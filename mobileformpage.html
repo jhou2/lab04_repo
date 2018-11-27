@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment Form</title>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <style>
 
@@ -38,6 +39,12 @@
 .col-75 {
   padding: 0 16px;
 }
+
+#infopage {
+
+}
+
+
 
 .whole {
   background-color: #f2f2f2;
@@ -110,7 +117,7 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="whole">
-      <form action="/action_page.php">
+      <form>
         <h2>Payment Information</h2>
         <div class="row">
           <div class="col-50">
@@ -144,9 +151,11 @@ span.price {
               <button id="interac" class="fa fa-credit-card fa-2x" style="color:grey">
               </button>
               <button id="cheque" class="fa fa-money-check-alt fa-2x"></button>
-            </div id = "infopage">
-            <label for="emailaddress">Payment Email</label>
-            <input class="customeremail" type="text" id="email" name="email" placeholder="Payment Email">
+            </div>
+            <div id = "infopage">
+            <label id="emailaddress">Payment Email</label>
+            <input type="text" id="emailadd" name="email" placeholder="Payment Email"/>
+          </div>
           </div>
 
         </div>
@@ -170,10 +179,19 @@ span.price {
   </div>
 </div>
 <script>
+function myFunction() {
+    var x = document.getElementById("infopage");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    }
 $("#infopage").hide();
+$("#emailaddress").hide();
+$("#emailadd").hide();
 
     $("#cheque").click(function(){
-        $("#infopage").show();
+      $("#infopage").show();
+      $("#emailaddress").show();
+      $("#emailadd").show();
     });
 </script>
 
