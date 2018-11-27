@@ -1,3 +1,4 @@
+
 $('#brandInfo').css('display','none');
 $('#modelInfo').css('display','none');
 
@@ -73,7 +74,7 @@ let list = [{
 						{ name : 'Samsung Acc',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'H AccP',
+						{ name : 'HP Acc',
 							model: [1, 2, 3, 4, 5]
 						}
 					]
@@ -91,38 +92,42 @@ for (let k = 0; k < 4; k++) {
 			let brandBtn = $('#brand' + (j + 1));
 			brandBtn.text(brand);
 
-			var brandBtn1 = $('#brand1');
-			brandBtn1.on('click', function(){
-				console.log(brandBtn1.text());
-
-			})
-
-			var brandBtn2 = $('#brand2');
-			brandBtn2.on('click', function(){
-				console.log(brandBtn2.text());
-
-			})
-
-			var brandBtn3 = $('#brand3');
-			brandBtn3.on('click', function(){
-				console.log(brandBtn3.text());
-
-			})
-
-			var brandBtn4 = $('#brand4');
-			brandBtn4.on('click', function(){
-				console.log(brandBtn4.text());
-
-			})
-
-			var brandBtn5 = $('#brand5');
-			brandBtn5.on('click', function(){
-				console.log(brandBtn5.text());
-
-			})
 		}
 		})
 	}
+	var brandBtn1 = $('#brand1');
+	brandBtn1.on('click', function(){
+		var brandBtn1Val = brandBtn1.text();
+		// console.log(brandBtn1.text());
+
+	})
+
+	var brandBtn2 = $('#brand2');
+	brandBtn2.on('click', function(){
+		// console.log(brandBtn2.text());
+		var brandBtn2Val = brandBtn2.text();
+	})
+
+	var brandBtn3 = $('#brand3');
+	brandBtn3.on('click', function(){
+		var brandBtn3Val = brandBtn3.text();
+		// console.log(brandBtn3.text());
+
+	})
+
+	var brandBtn4 = $('#brand4');
+	brandBtn4.on('click', function(){
+		var brandBtn4Val = brandBtn4.text();
+		// console.log(brandBtn4.text());
+
+	})
+
+	var brandBtn5 = $('#brand5');
+	brandBtn5.on('click', function(){
+		var brandBtn5Val = brandBtn5.text();
+		// console.log(brandBtn5.text());
+
+	})
 
 		// 	brandBtn.on('click', function(){
 		// 		// $('#modelInfo').toggle();
