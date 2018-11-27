@@ -23,7 +23,7 @@ let list = [{
 	}, {
 			name : 'laptop',
 			brand : [
-				{ name : 'Mac laptop',
+				{ name : 'Apple laptop',
 					model: ['Macbook air 11', 'Macbook air 13', 'Mac pro 11', 'Mac pro 13', 'Macintosh']
 				},
 				{ name : 'Dell laptop',
@@ -61,19 +61,19 @@ let list = [{
 			}, {
 					name : 'accessory',
 					brand : [
-						{ name : 'Microsoft Acc',
+						{ name : 'KeyBoard',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'Dell Acc',
+						{ name : 'External Hard Drive',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'LG Acc',
+						{ name : 'Mouse',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'Samsung Acc',
+						{ name : 'Internal Hardwares',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'H AccP',
+						{ name : 'Other',
 							model: [1, 2, 3, 4, 5]
 						}
 					]
@@ -99,24 +99,28 @@ for (let k = 0; k < 4; k++) {
 
 			var brandBtn2 = $('#brand2');
 			brandBtn2.on('click', function(){
+				window.location.href = 'file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/modelpersonalinfo.html';
 				console.log(brandBtn2.text());
 
 			})
 
 			var brandBtn3 = $('#brand3');
 			brandBtn3.on('click', function(){
+				window.location.href = 'file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/modelpersonalinfo.html';
 				console.log(brandBtn3.text());
 
 			})
 
 			var brandBtn4 = $('#brand4');
 			brandBtn4.on('click', function(){
+				window.location.href = 'file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/modelpersonalinfo.html';
 				console.log(brandBtn4.text());
 
 			})
 
 			var brandBtn5 = $('#brand5');
 			brandBtn5.on('click', function(){
+				window.location.href = 'file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/modelpersonalinfo.html';
 				console.log(brandBtn5.text());
 
 			})
