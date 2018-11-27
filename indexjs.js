@@ -23,57 +23,57 @@ let list = [{
 	}, {
 			name : 'laptop',
 			brand : [
-				{ name : 'Apple',
+				{ name : 'Mac laptop',
 					model: ['Macbook air 11', 'Macbook air 13', 'Mac pro 11', 'Mac pro 13', 'Macintosh']
 				},
-				{ name : 'Dell',
+				{ name : 'Dell laptop',
 					model: ['XPS 9360 13', 'XPS 9370 13', 'XPS 9360 15', 'XPS 9360 11', 'XPS']
 				},
-				{ name : 'LG',
+				{ name : 'LG laptop',
 					model: ['LG Gram14', 'LG laptop2', 'LG laptop3', 'LG laptop4', 'LG laptop5']
 				},
-				{ name : 'Samsung',
+				{ name : 'Samsung laptop',
 					model: ['S laptop1', 'S laptop2', 'S laptop3', 'S laptop4', 'S laptop5']
 				},
-				{ name : 'HP',
+				{ name : 'HP laptop',
 					model: ['HP laptop1', 'HP laptop2', 'HP laptop3', 'HP laptop4', 'HP laptop5']
 				}
 			]
 		}, {
 				name : 'phone',
 				brand : [
-					{ name : 'Apple',
+					{ name : 'Apple Phone',
 						model: ['Iphone5', 'Iphone6s', 'Iphone8', 'IphoneX', 'Iphone5s']
 					},
-					{ name : 'Dell',
+					{ name : 'Dell Phone',
 						model: ['Venue8', 'Venue7', 'Streak7', 'Venue10', 'Venue6']
 					},
-					{ name : 'LG',
+					{ name : 'LG Phone',
 						model: ['Nexus4', 'Q6', 'Nexux5', 'Nexux5X', 'V30']
 					},
-					{ name : 'Samsung',
+					{ name : 'Samsung Phone',
 						model: ['GalaxyJ3', 'Galaxy Core', 'Galaxy Nexus', 'Galaxy A5', 'Galaxy A8']
 					},
-					{ name : 'Sony',
+					{ name : 'Sony Phone',
 						model: ['Xperia M4', 'Xperia Z', 'Xperia Z1', 'XperiaZ2', 'XperiaZ3']
 					}
 				]
 			}, {
 					name : 'accessory',
 					brand : [
-						{ name : 'Apple',
+						{ name : 'Microsoft Acc',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'Dell',
+						{ name : 'Dell Acc',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'LG',
+						{ name : 'LG Acc',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'Samsung',
+						{ name : 'Samsung Acc',
 							model: [1, 2, 3, 4, 5]
 						},
-						{ name : 'HP',
+						{ name : 'H AccP',
 							model: [1, 2, 3, 4, 5]
 						}
 					]
@@ -82,30 +82,72 @@ let list = [{
 	// Event handler when computer is clicked
 for (let k = 0; k < 4; k++) {
 	let deviceBtn = $('#device-btn' + (k + 1));
+
 	deviceBtn.on('click', function() {
-		$('#brandInfo').show();
+		$('#brandInfo').toggle();
 		// Assign buttons to brand button on index html
 		for(let j = 0; j < 5; j++) {
-			let brand = list[k].brand[j];
+			let brand = list[k].brand[j].name;
 			let brandBtn = $('#brand' + (j + 1));
-			brandBtn.on('click', function(){
-				$('#modelInfo').toggle();
+			brandBtn.text(brand);
+
+			var brandBtn1 = $('#brand1');
+			brandBtn1.on('click', function(){
+				console.log(brandBtn1.text());
+
 			})
-			brandBtn.text(brand.name);
-			// Assign models to models button on index html
-			brandBtn.on('click', function() {
-				for(let i = 0; i < 5; i++) {
-					let modelBtn = $('#model' + (i + 1));
-					modelBtn.text(brand.model[i]);
-					modelBtn.on('click', function() {
-						userModel = modelBtn.text();
-						console.log(deviceBtn.text() + " " + brandBtn.text() + " " + userModel);
-					});
-				}
-			});
+
+			var brandBtn2 = $('#brand2');
+			brandBtn2.on('click', function(){
+				console.log(brandBtn2.text());
+
+			})
+
+			var brandBtn3 = $('#brand3');
+			brandBtn3.on('click', function(){
+				console.log(brandBtn3.text());
+
+			})
+
+			var brandBtn4 = $('#brand4');
+			brandBtn4.on('click', function(){
+				console.log(brandBtn4.text());
+
+			})
+
+			var brandBtn5 = $('#brand5');
+			brandBtn5.on('click', function(){
+				console.log(brandBtn5.text());
+
+			})
 		}
-	});
-}
+		})
+	}
+
+		// 	brandBtn.on('click', function(){
+		// 		// $('#modelInfo').toggle();
+		// 		let brandName = $('this').val();
+		// 		console.log(brandBtn);
+		// 	})
+
+			// Assign models to models button on index html
+			// brandBtn.on('click', function() {
+			// 	for(let i = 0; i < 5; i++) {
+			// 		let modelBtn = $('#model' + (i + 1));
+			// 		modelBtn.text(brand.model[i]);
+			// 		modelBtn.on('click', function() {
+			// 			userModel = modelBtn.text();
+			// 			console.log(deviceBtn.text() + brandBtn.text() + userModel);
+			// 		})
+
+
+			// });
+		// }
+
+
+
+
+
 
 
 // if the computer button is clicked
