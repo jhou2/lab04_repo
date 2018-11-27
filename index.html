@@ -77,6 +77,10 @@
 		display: inline;
 	}
 
+	#brandInfo {
+		margin: 40px;
+	}
+
 	/* About Section */
 	#about {
 		font-size: 1.4em;
@@ -145,7 +149,6 @@
 		min-height: 400px;
 	}
 
-
  .deviceBtn{
 	width: 130px;
 	height: 130px;
@@ -155,10 +158,8 @@
  #deviceInfo {
  	margin: 10px 10%;
 
-
  }
  #brandInfo{
-    width: 130px;
 	margin-left: 140px;
  }
  #modelInfo{
@@ -174,7 +175,7 @@
 	margin-left: 140px;
  }
  #modelInfo-phone-brand1,#modelInfo-phone-brand2, #modelInfo-phone-brand3, #modelInfo-phone-brand4, #modelInfo-phone-brand5{
-     margin-left: 140px;
+  margin-left: 140px;
  }
  #brandInfo-accessory{
 	margin-left: 140px;
@@ -189,7 +190,6 @@
  	width: 100px;
  	height: 70px;
  }
-
  #personalInfo {
  	display: block;
  	clear: both;
@@ -221,9 +221,9 @@
 }
 
 .panel {
-    padding: 0 18px;
+    padding:18px;
     display: none;
-    background-color: white;
+    background-color: #F5F5F5;
     overflow: hidden;
 }
 </style>
@@ -266,7 +266,6 @@
 	<button class="btn btn-light computer-model-btn" id="model4" type="button"></button>
 	<button class="btn btn-light computer-model-btn" id="model5" type="button"></button>
 </div>
-<!--Computer model buttons set -->
 
 
      <div id="personalInfo">
@@ -287,7 +286,7 @@
 
 	<!-- Second Image with Add Whatever -->
 	<div class="bgimg-2">
-		<h1 class = "middletext">How We PROCESS?</h1>
+		<h1 class = "middletext">How We Process?</h1>
 	</div>
 	<!-- Second contents-->
 	<div class="fields" id="content2">
@@ -381,16 +380,11 @@
 			<fieldset>
 				<h4>Model type</h4><br/>
 						<select name="Brand" required>
-							<option value="">---</option>
+							<option value="">-</option>
 							<option value="Apple" required>Apple</option>
 							<option value="Samsung" required>Samsung</option>
 							<option value="HuaWei" required>HuaWei</option>
-							<option value="Lenovo" required>Lenovo</option>
 							<option value="LG" required>LG</option>
-							<option value="ZTE" required>ZTE</option>
-							<option value="Blackberry" required>Blackberry</option>
-							<option value="Nokia" required>Nokia</option>
-							<option value="Sony" required>Sony</option>
 						</select><br/><br/>
 						<a href = "#" id = "submit1">Submit</a>
 						<br/><br/>
