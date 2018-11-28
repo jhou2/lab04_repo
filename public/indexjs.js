@@ -1,9 +1,8 @@
-
 $('#brandInfo').css('display','none');
 var brandName = "";
 var modelName = "";
 
-let list = ['Apple', 'Dell', 'LG', 'Samsung', 'Sony'];
+let list = ['Apple', 'Google', 'LG', 'Samsung', 'Hwawei'];
 
 	// Event handler when computer is clicked
 // for (let k = 0; k < 1; k++) {
