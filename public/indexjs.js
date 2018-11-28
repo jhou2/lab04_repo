@@ -42,10 +42,11 @@ formSubmit.on('click', function(){
 var count = 0;
 var checkout = $('#checkout');
 checkout.on('click', function(){
-count ++;
-console.log("hello");
-	function writeUserData() {
-		firebase.database().ref('/users/'+ count).set({
+// count ++;
+// console.log("hello");
+
+	// function writeUserData() {
+		firebase.database().ref('/users/').push().set({
 			username: $('#name').val(),
 			address: $('#address').val(),
 			email: $('#email').val(),
@@ -60,6 +61,7 @@ console.log("hello");
 			billing_email: $('#billing-email').val()
 
 		});
-	}
+		alert()
+	// }
 
 })
