@@ -386,6 +386,22 @@ span.price {
   float: right;
   color: grey;
 }
+#modelsearch{
+  display: block;
+  clear: both;
+  width: 50%;
+  margin-left: 50px;
+  margin: 5%;
+}
+.submitbtn {
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
@@ -452,8 +468,8 @@ span.price {
   <span class="close">&times;</span>
 
   	<div id = "modelsearch">
-		Model: <input id="input" class = "textfield" type = "search" name = "modelType" title = "modelofdevice" placeholder = "Enter Your Model" required/><br/>
-		 <button id="form-submit" class="btn">Submit</button><br/>
+		Model: <input id="input" class = "textfield" type = "search" name = "modelType" title = "modelofdevice" placeholder = " Enter Your Model" required/><br/>
+		<input type="submit" id="checkout" value="Submit" class= "btn btn-light"><br/>
 	</div>
 
 		<div id="personalInfo">
