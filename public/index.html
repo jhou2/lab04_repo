@@ -19,6 +19,19 @@
 		  };
 		  firebase.initializeApp(config);
 		</script>
+
+		<!-- Firebase App is always required and must be first -->
+<script src="/__/firebase/5.5.9/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="/__/firebase/5.5.9/firebase-auth.js"></script>
+<script src="/__/firebase/5.5.9/firebase-database.js"></script>
+<script src="/__/firebase/5.5.9/firebase-firestore.js"></script>
+<script src="/__/firebase/5.5.9/firebase-messaging.js"></script>
+<script src="/__/firebase/5.5.9/firebase-functions.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+
 	<style media="screen">
 		<title>TEAM 2</title>
 
@@ -438,7 +451,8 @@ span.price {
   <span class="close">&times;</span>
 
   	<div id = "modelsearch">
-		Model: <input class = "textfield" type = "search" name = "modelType" title = "modelofdevice" placeholder = "Enter Your Model" required/><br/><br/>
+		Model: <input id="input" class = "textfield" type = "search" name = "modelType" title = "modelofdevice" placeholder = "Enter Your Model" required/><br/>
+		 <button id="form-submit" class="btn">Submit</button><br/>
 	</div>
 
 		<div id="personalInfo">
@@ -451,8 +465,7 @@ span.price {
 				 Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
 				 Any Additional Information:<br/><textarea name = "description" rows = "10" cols = "50">
 				 </textarea><br/><br/>
-				 <a href = "#" id = "submit2"><input type = "submit" value = "Submit"/></a>
-									 <input type = "reset" value = "Reset"/>
+
 			 </fieldset>
 		 </form>
 	 </div>
