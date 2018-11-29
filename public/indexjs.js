@@ -3,15 +3,8 @@ var brandName = "";
 var modelName = "";
 var newKey = "";
 var cart = [];
-<<<<<<< HEAD
 var itemsInCart = [];
 let list = ['Apple', 'Dell', 'LG', 'Samsung', 'Hwawei'];
-=======
-let list = ['Apple', 'Dell', 'LG', 'Samsung', 'Hwawei'];
-
-	// Event handler when computer is clicked
-// for (let k = 0; k < 1; k++) {
->>>>>>> 81a8ace8e2f301bcab304d86a82b2a6d21486009
 
 // Event handler when computer is clicked
 let deviceBtn = $('#device-btn1');
