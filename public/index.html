@@ -207,8 +207,19 @@
 	/* Third image */
 	.bgimg-3 {
 		background-image: url("https://farm6.staticflickr.com/5542/30017499820_49927254e0_k.jpg");
-		min-height: 400px;
+		min-height: 450px;
 	}
+    .signupheading{
+        line-height: 300px;
+		vertical-align: middle;
+		text-align: center;
+		color: black;   
+    }
+    #signup input{
+        margin-left: 40%;
+        margin-right: 30px;
+        margin-left: 37%;
+    }
 
     .deviceBtn{
 	   width: 130px;
@@ -863,7 +874,11 @@
 
 	<!-- Theid Image with Add Whatever -->
 	<div class="bgimg-3">
-		<h1 class = "middletext"></h1>
+        <h1 class = "signupheading">Sign Up Today and Get News Letters From Us</h1>
+        <div id="signup">
+            <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="email" name="email" placeholder="Email"/>
+            <button class="mdl-button mdl-js-button mdl-button--raised" style="background-color: mediumseagreen" id="quickstart-sign-up" name="signup">Sign Up</button>
+        </div>
 	</div>
 	<!-- Third contents-->
 	<!-- About us content-->
