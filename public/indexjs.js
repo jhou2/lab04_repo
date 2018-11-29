@@ -1,5 +1,5 @@
 
-$('#brandInfo').css('display','none');
+// $('#brandInfo').css('display','none');
 var brandName = "";
 var modelName = "";
 var cart = [];
@@ -10,7 +10,8 @@ let list = ['Apple', 'Dell', 'LG', 'Samsung', 'Sony'];
 
 let deviceBtn = $('#device-btn1');
 deviceBtn.on('click', function() {
-	$('#brandInfo').toggle();
+	// $('#brandInfo').toggle();
+
 		// Assign buttons to brand button on index html
 	for(let j = 0; j < 5; j++) {
 		let brand = list[j];
@@ -30,11 +31,19 @@ var database = firebase.database();
 var formSubmit = $('#form-submit');
 // var userId = firebase.auth().currentUser.uid;
 formSubmit.on('click', function(){
+
+
 	modelName = $('#input').val();
 	firebase.database().ref('/phone/' + brandName + '/' + modelName).once('value').then(function(snapshot) {
-		// var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+
+
 		var model = snapshot.val();
 		console.log(model);
+		if (model==null) {
+			alert("We're currently not accepting this model.")
+		}else{
+
+
 
 		var item = $('#shopping').append($('<p>').text(modelName + " " + model.price));
 		// var item = $('#shopping').append($('<p>').text(modelName + " " + model.price));
@@ -52,6 +61,7 @@ formSubmit.on('click', function(){
 			console.log(total);
 		}
 
+}
 	});
 	// console.log(cart);
 
@@ -72,11 +82,6 @@ checkout.on('click', function(){
 
 	// function writeUserData() {
 		firebase.database().ref('/users/').push().set({
-			username: $('#name').val(),
-			address: $('#address').val(),
-			email: $('#email').val(),
-			phone_number: $('#phone').val(),
-			additional_info: $('#info').val(),
 			billing_name:$('#billing-name').val(),
 			billing_phone: $('#billing-phone').val(),
 			billing_address: $('#billing-address').val(),

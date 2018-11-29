@@ -379,7 +379,7 @@
         margin-left: 95px;
     }
     #brand1, #brand2, #brand3, #brand4, #brand5 {
-        margin-left: 55px;
+        /* margin-left: 55px; */
     }
     a {
         color: #2196F3;
@@ -644,15 +644,6 @@
 
     <!-- device -->
     <button class="btn btn-light deviceBtn" id="device-btn1" type="button"><img src = "cellphoneicon.png" id = "img3"><br/>Phone</button><br/>
-    <!--Computer brand 1~5 -->
-
-    <div id="brandInfo" class="btn-group">
-        <button class="btn btn-light computer-brand-btn" id="brand1" type="button"></button>
-        <button class="btn btn-light computer-brand-btn" id="brand2" type="button"></button>
-        <button class="btn btn-light computer-brand-btn" id="brand3" type="button"></button>
-        <button class="btn btn-light computer-brand-btn" id="brand4" type="button"></button>
-        <button class="btn btn-light computer-brand-btn" id="brand5"  type="button"></button>
-    </div><br/><br/>
 
     <!-- Trigger/Open The Modal -->
     <!-- <button id="myBtn">Open Modal</button> -->
@@ -661,26 +652,24 @@
     <div id="myModal" class="modal">
     <div class="modal-content">
     <span class="close">&times;</span>
+		<!--Computer brand 1~5 -->
+
+		<div id="brandInfo" class="btn-group">
+				<button class="btn btn-light computer-brand-btn" id="brand1" type="button"></button>
+				<button class="btn btn-light computer-brand-btn" id="brand2" type="button"></button>
+				<button class="btn btn-light computer-brand-btn" id="brand3" type="button"></button>
+				<button class="btn btn-light computer-brand-btn" id="brand4" type="button"></button>
+				<button class="btn btn-light computer-brand-btn" id="brand5"  type="button"></button>
+		</div>
+
+
+
 
     <div id = "modelsearch">
-        Model: <input id="input" class = "textfield" type = "search" name = "modelType" title = "modelofdevice" placeholder = "Enter Your Device Model (ex. Iphone 7)" required = "required"/>
+        Model: <input id="input" class = "textfield" type = "search" name = "modelType" title = "modelofdevice" placeholder = "Enter Device Model (ex. Iphone 7)" required = "required"/>
         <br/><br/>
         <input type="submit" id="form-submit" value="Submit" class= "btn btn-light"><br/>
     </div>
-
-    <div id="personalInfo">
-        <form action = "file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/mobileformpage.html">
-            <fieldset>
-             <h4>Your Personal Info</h4><br/>
-             Name: <br/><input id="name" class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
-             Address:<br/><input id="address" class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # (if applicable) and Street #" required /><br/><br/><br/>
-             Email:<br/><input id="email" class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
-             Phone Number:<br/><input id="phone"class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
-             Any Additional Information:<br/><textarea id="info" name = "description" rows = "10" cols = "50">
-             </textarea><br/><br/>
-         </fieldset>
-        </form>
-     </div>
 
      <div class="row">
         <div class="col-75">
@@ -736,6 +725,8 @@
 	           </div>
 	       </div>
 	 </div>
+
+
   </div>
 </div>
 
@@ -855,7 +846,7 @@
         var modal = document.getElementById('myModal');
 
         // Get the button that opens the modal
-        var btn = document.getElementById("brandInfo");
+        var btn = document.getElementById("device-btn1");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
