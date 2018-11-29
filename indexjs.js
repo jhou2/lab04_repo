@@ -93,6 +93,7 @@ for (let k = 0; k < 4; k++) {
 
 			var brandBtn1 = $('#brand1');
 			brandBtn1.on('click', function(){
+				window.location.href = 'file:///C:/Users/chris/Desktop/School/COMP%201930/Git/gitDemo/lab04_repo/modelpersonalinfo.html';
 				console.log(brandBtn1.text());
 
 			})
