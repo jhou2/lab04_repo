@@ -3,7 +3,7 @@
 var brandName = "";
 var modelName = "";
 var cart = [];
-let list = ['Apple', 'Dell', 'LG', 'Samsung', 'Sony'];
+let list = ['Apple', 'Dell', 'LG', 'Samsung', 'Hwawei'];
 
 	// Event handler when computer is clicked
 // for (let k = 0; k < 1; k++) {
