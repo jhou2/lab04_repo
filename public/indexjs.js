@@ -11,7 +11,7 @@ let deviceBtn = $('#device-btn1');
 deviceBtn.on('click', function() {
 	$('#brandInfo').toggle();
 		// Assign buttons to brand button on index html
-	for(let j = 0; j < 10; j++) {
+	for(let j = 0; j < 5; j++) {
 		let brand = list[j];
 		let brandBtn = $('#brand' + (j + 1));
 		brandBtn.text(brand);
@@ -34,7 +34,7 @@ formSubmit.on('click', function(){
 		// var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
 		var model = snapshot.val();
 		console.log(model);
-		$('#shopping').append($('<p>').text(modelName + " " + model.price)); //??
+		$('#shopping').append($('<p>').text(modelName + " " + model.price));
 	});
 });
 
@@ -60,7 +60,6 @@ checkout.on('click', function(){
 			billing_email: $('#billing-email').val()
 
 		});
-		alert()
 	// }
 
 })
