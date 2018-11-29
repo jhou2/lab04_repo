@@ -2,7 +2,7 @@
 $('#brandInfo').css('display','none');
 var brandName = "";
 var modelName = "";
-
+var cart = [];
 let list = ['Apple', 'Dell', 'LG', 'Samsung', 'Sony'];
 
 	// Event handler when computer is clicked
@@ -35,12 +35,37 @@ formSubmit.on('click', function(){
 		// var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
 		var model = snapshot.val();
 		console.log(model);
-		$('#shopping').append($('<p>').text(modelName + " " + model.price)); //??
+
+		var item = $('#shopping').append($('<p>').text(modelName + " " + model.price));
+		// var item = $('#shopping').append($('<p>').text(modelName + " " + model.price));
+		// var cart = [];
+		// cart.push(item);
+
+		var sum = 0;
+		sum = parseInt(model.price.substring(1, model.price.length));
+		cart.push(sum);
+		console.log(cart);
+		var total = 0;
+		for (var i = 0; i < cart.length; i++){
+			total += cart[i];
+			$('#total').html("Total: $"+total);
+			console.log(total);
+		}
+
 	});
+	// console.log(cart);
+
+
 });
+
+function callback(){
+
+}
 
 var count = 0;
 var checkout = $('#checkout');
+
+
 checkout.on('click', function(){
 // count ++;
 // console.log("hello");
@@ -61,7 +86,7 @@ checkout.on('click', function(){
 			billing_email: $('#billing-email').val()
 
 		});
-		alert()
+
 	// }
 
 })
