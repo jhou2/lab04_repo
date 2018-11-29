@@ -34,7 +34,6 @@
 		  firebase.initializeApp(config);
    </script>
    <style media="screen">
-	@import url(https://fonts.googleapis.com/css?family=Flamenco);
 	body, h1, h2, h3, h4, h5, h6 {
 		font-family: "Lato", sans-serif;
 	}
@@ -54,7 +53,6 @@
 		vertical-align: middle;
 		text-align: center;
 		color: black;
-		font-family: Flamenco;
 	}
 	.navbar li a:hover {
         background-color: #DAEDDB;
@@ -147,9 +145,53 @@
 
 	/* Second image */
 	.bgimg-2 {
-		background-image: url('https://farm9.staticflickr.com/8280/30017501010_d8a240493c_k.jpg');
-		min-height: 500px;
+		background-image: url("processbackground.png");
+		min-height: 800px;
+        filter: grayscale(50%);
 	}
+    #firstcolumn{
+        width: 33%;
+        margin-left: 37px;
+        color: black;
+        float: left;
+    }
+    #firstcolumn img{
+        margin-left: 130px;
+        width: 33%;
+    }
+    #firstcolumn h2, p{
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    #middlecolumn{
+        width: 25%; 
+        float: left;
+    }
+    #middlecolumn img{
+        width: 25%;
+        margin-bottom: 87px;
+        margin-left: 41%;
+    }
+    #lastcolumn{
+        width: 33%;
+        float: left;
+        color: black;
+    }
+   .lastcolimg1{
+        width: 30%;
+        margin-left: 38%;
+        margin-bottom: 53px;
+    }
+    .lastcolimg2{
+        width: 30%;
+        margin-left: 38%;
+        margin-bottom: 53px;
+        margin-top: -36px;
+    }
+    #lastcolumn h2, p{
+        margin-left: 50px;
+    }
+    
 
 	/* Third image */
 	.bgimg-3 {
@@ -686,7 +728,33 @@
     
 	<!-- Second Image with Add Whatever -->
 	<div class="bgimg-2">
-		<h1 class = "middletext">How We Process?</h1>
+		<h1 class = "middletext">Selling: How it Works</h1>
+        <div id="firstcolumn">
+            <h2>Get an Instant Quote</h2>
+            <p>Simply find your device and device condition by answering few questions.</p>
+            <br/>
+            <img src="shipping.png" alt="shipdevice">
+            <br/><br/><br/>
+            <h2>Get Paid!</h2>
+            <p>Get paid throug paypal, interac, and cheque as soon as we receive your device.</p>
+            <br/><br/>
+        </div>
+        <div id="middlecolumn">
+            <img src="number-one-in-a-circle.png" alt="one">
+            <br/>
+            <img src="number-two-in-a-circle.png" alt="two">
+            <br/>
+            <img src="number-three-in-a-circle.png" alt="three">
+        </div>
+        <div id="lastcolumn">
+            <img class="lastcolimg1" src="devicechek.png" alt="deviceinfoandcondition">
+            <br/>
+            <h2>Ship Your Device</h2>
+            <p>Don't worry! Shipping is free! Send your device with provided shiping label and kit.</p>
+            <br/><br/><br/>
+            <img class="lastcolimg2" src="getpaid.png" alt="payment">
+        </div>
+        
 	</div>
 	<!-- Second contents-->
 	<div class="fields" id="content2">
