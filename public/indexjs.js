@@ -11,7 +11,7 @@ let deviceBtn = $('#device-btn1');
 deviceBtn.on('click', function() {
 	$('#brandInfo').toggle();
 		// Assign buttons to brand button on index html
-	for(let j = 0; j < 5; j++) {
+	for(let j = 0; j < 10; j++) {
 		let brand = list[j];
 		let brandBtn = $('#brand' + (j + 1));
 		brandBtn.text(brand);
