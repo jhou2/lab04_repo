@@ -150,7 +150,7 @@
 	/* First image */
 	.bgimg-1 {
 		background-image: url('https://farm6.staticflickr.com/5542/30017499820_49927254e0_k.jpg');
-		min-height: 100%;
+		min-height: 850px;
 	}
 
 	/* Second image */
@@ -205,7 +205,8 @@
 
 	/* Third image */
 	.bgimg-3 {
-		background-image: url("https://farm6.staticflickr.com/5542/30017499820_49927254e0_k.jpg");
+		background-image: url("https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg");
+        filter: grayscale(30%);
 		min-height: 450px;
 	}
     .signupheading{
@@ -216,7 +217,7 @@
      }
     #signup{
         display: inline;
-        margin-left: 19%;
+        margin-left: 27%;
      }
     #signup input{
          margin-right: 10px;
@@ -515,6 +516,7 @@
     }
     #login{
         margin-left: 37%;
+        position: absolute;
     }
     </style>
 </head>
@@ -886,91 +888,22 @@
          <div id="signup">
              <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="email2" name="email" placeholder="Email"/>
              <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="password2" name="password" placeholder="Password"/>
-             <button class="mdl-button mdl-js-button mdl-button--raised" style="background-color: mediumseagreen; margin-left: 30px;" id="quickstart-sign-up" name="signup">Sign Up</button>
+             <button onclick="signUp()" class="mdl-button mdl-js-button mdl-button--raised" style="background-color: #4EDC90; margin-left: 30px;" id="quickstart-sign-up2" name="signup">Sign Up</button>
          </div>
 	</div>
     <script>
-        /**
-         * Handles the sign up button press.
-         */
-        function handleSignUp() {
-          var email = document.getElementById('email2').value;
-          var password = document.getElementById('password2').value;
-          if (email2.length < 4) {
-            alert('Please enter an email address.');
-            return;
-          }
-          if (password2.length < 4) {
-            alert('Please enter a password.');
-            return;
-          }
-          // Sign in with email and pass.
-          // [START createwithemail]
-          firebase.auth().createUserWithEmailAndPassword(email2, password2).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // [START_EXCLUDE]
-            if (errorCode == 'auth/weak-password') {
-              alert('The password is too weak.');
-            } else {
-              alert(errorMessage);
-            }
-            console.log(error);
-            // [END_EXCLUDE]
-          });
-          // [END createwithemail]
+        $(document).ready(function(){
+            $("#error").hide();
+        });
+        function signUp(){
+            var emailnews = $("#email2").val();
+            var passwordnews = $("password2").val();
+            
+            firebase.auth().createUserWithEmailAndPassword(emailnews, passwordnews).then(function(){
+                alert("You are now subscribed.");
+            });
+                              
         }
-        /**
-         * initApp handles setting up UI event listeners and registering Firebase auth listeners:
-         *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
-         *    out, and that is where we update the UI.
-         */
-        function initApp() {
-          // Listening for auth state changes.
-          // [START authstatelistener]
-          firebase.auth().onAuthStateChanged(function(user) {
-            // [START_EXCLUDE silent]
-            document.getElementById('quickstart-verify-email').disabled = true;
-            // [END_EXCLUDE]
-            if (user) {
-              // User is signed in.
-              var displayName = user.displayName;
-              var email = user.email;
-              var emailVerified = user.emailVerified;
-              var photoURL = user.photoURL;
-              var isAnonymous = user.isAnonymous;
-              var uid = user.uid;
-              var providerData = user.providerData;
-              // [START_EXCLUDE]
-              document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-              document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-              document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-              if (!emailVerified) {
-                document.getElementById('quickstart-verify-email').disabled = false;
-              }
-              // [END_EXCLUDE]
-            } else {
-              // User is signed out.
-              // [START_EXCLUDE]
-              document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-              document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-              document.getElementById('quickstart-account-details').textContent = 'null';
-              // [END_EXCLUDE]
-            }
-            // [START_EXCLUDE silent]
-            document.getElementById('quickstart-sign-in').disabled = false;
-            // [END_EXCLUDE]
-          });
-          // [END authstatelistener]
-          document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-          document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-          document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-          document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
-        }
-        window.onload = function() {
-          initApp();
-        };
     </script>
 	<!-- Third contents-->
 	<!-- About us content-->
