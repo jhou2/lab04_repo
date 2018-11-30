@@ -888,21 +888,14 @@
          <div id="signup">
              <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="email2" name="email" placeholder="Email"/>
              <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="password2" name="password" placeholder="Password"/>
-             <button onclick="signUp()" class="mdl-button mdl-js-button mdl-button--raised" style="background-color: #4EDC90; margin-left: 30px;" id="quickstart-sign-up2" name="signup">Sign Up</button>
+             <button onclick="ClearTextboxes()" class="mdl-button mdl-js-button mdl-button--raised" style="background-color: #4EDC90; margin-left: 30px;" id="quickstart-sign-up2" name="signup">Sign Up</button>
          </div>
 	</div>
-    <script>
-        $(document).ready(function(){
-            $("#error").hide();
-        });
-        function signUp(){
-            var emailnews = $("#email2").val();
-            var passwordnews = $("password2").val();
-            
-            firebase.auth().createUserWithEmailAndPassword(emailnews, passwordnews).then(function(){
-                alert("You are now subscribed.");
-            });
-                              
+    <script type = "text/javascript" language = "javascript">
+        function ClearTextboxes(){
+            document.getElementById("email2").value="";
+            document.getElementById("password2").value="";
+            alert("You are successfully subscribed!")
         }
     </script>
 	<!-- Third contents-->
