@@ -155,7 +155,7 @@
 
 	/* Second image */
 	.bgimg-2 {
-		background-image: url("processbackground.png");
+		background-image: url("../Pictures/processbackground.png");
 		min-height: 800px;
         filter: grayscale(50%);
 	}
@@ -220,7 +220,8 @@
         margin-left: 27%;
      }
     #signup input{
-         margin-right: 10px;
+        margin-right: 10px;
+        margin-left: 11%;
      }
        
     .deviceBtn{
@@ -523,7 +524,7 @@
 <body>
 	<div id="top">
 		<nav class="navbar fixed-top navbar-light bg-white">
-            <li><a href="#"><img src = "logo.png" id = "logo"></a><a href="#" class="navbar-brand glyphicon glyphicon-phone" id="homepage">Green+</a></li>
+            <li><a href="#"><img src = "../Pictures/logo.png" id = "logo"></a><a href="#" class="navbar-brand glyphicon glyphicon-phone" id="homepage">Green+</a></li>
 			 <li><a href="#point" class="navbar-brand" id="about-us">About Us</a></li>
 		</nav>
 	</div>
@@ -731,7 +732,7 @@
 
     <!-- device -->
     <p class="devicebtnpara">We Buy Your Device!</p>
-    <button class="btn btn-light deviceBtn" id="device-btn1" type="button"><img src = "cellphoneicon.png" id = "img3"><br/>Phone</button><br/>
+    <button class="btn btn-light deviceBtn" id="device-btn1" type="button"><img src = "../Pictures/cellphoneicon.png" id = "img3"><br/>Phone</button><br/>
 
     <!-- Trigger/Open The Modal -->
     <!-- <button id="myBtn">Open Modal</button> -->
@@ -794,7 +795,7 @@
 	                           <div class="icon-container">
 	                               <label  class="label--checkbox1">
                                         <span><input type="radio" name="checkbox"></span>
-                                         <img src="paypallogo.png" alt="paypallogo">
+                                         <img src="../Pictures/paypallogo.png" alt="paypallogo">
                                     </label>
  	                               <label class="label--checkbox2">
                                         <span><input type="radio" name="checkbox"></span>
@@ -834,26 +835,26 @@
             <h2>Get an Instant Quote</h2>
             <p>Simply find your device and device condition by answering few questions.</p>
             <br/>
-            <img src="shipping.png" alt="shipdevice">
+            <img src="../Pictures/shipping.png" alt="shipdevice">
             <br/><br/><br/>
             <h2>Get Paid!</h2>
             <p>Get paid throug paypal, interac, and cheque as soon as we receive your device.</p>
             <br/><br/>
         </div>
         <div id="middlecolumn">
-            <img src="number-one-in-a-circle.png" alt="one">
+            <img src="../Pictures/number-one-in-a-circle.png" alt="one">
             <br/>
-            <img src="number-two-in-a-circle.png" alt="two">
+            <img src="../Pictures/number-two-in-a-circle.png" alt="two">
             <br/>
-            <img src="number-three-in-a-circle.png" alt="three">
+            <img src="../Pictures/number-three-in-a-circle.png" alt="three">
         </div>
         <div id="lastcolumn">
-            <img class="lastcolimg1" src="devicechek.png" alt="deviceinfoandcondition">
+            <img class="lastcolimg1" src="../Pictures/devicechek.png" alt="deviceinfoandcondition">
             <br/>
             <h2>Ship Your Device</h2>
             <p>Don't worry! Shipping is free! Send your device with provided shiping label and kit.</p>
             <br/><br/><br/>
-            <img class="lastcolimg2" src="getpaid.png" alt="payment">
+            <img class="lastcolimg2" src="../Pictures/getpaid.png" alt="payment">
         </div>
 
 	</div>
@@ -887,14 +888,12 @@
 		 <h1 class = "signupheading">Sign Up Today and Get News Letters From Us</h1>
          <div id="signup">
              <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="email2" name="email" placeholder="Email"/>
-             <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="password2" name="password" placeholder="Password"/>
              <button onclick="ClearTextboxes()" class="mdl-button mdl-js-button mdl-button--raised" style="background-color: #4EDC90; margin-left: 30px;" id="quickstart-sign-up2" name="signup">Sign Up</button>
          </div>
 	</div>
     <script type = "text/javascript" language = "javascript">
         function ClearTextboxes(){
             document.getElementById("email2").value="";
-            document.getElementById("password2").value="";
             alert("You are successfully subscribed!")
         }
     </script>
