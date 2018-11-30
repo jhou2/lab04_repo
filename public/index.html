@@ -214,10 +214,12 @@
  		text-align: center;
  		color: black;   
      }
-     #signup input{
-         margin-left: 40%;
-         margin-right: 30px;
-         margin-left: 37%;
+    #signup{
+        display: inline;
+        margin-left: 19%;
+     }
+    #signup input{
+         margin-right: 10px;
      }
        
     .deviceBtn{
@@ -422,10 +424,14 @@
     }
     input[type=text] {
         width: 100%;
+        margin-left: 43px;
         margin-bottom: 20px;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 3px;
+    }
+    #buttons{
+        margin-left: 39px;
     }
 
     label {
@@ -502,7 +508,7 @@
        }
     #status{
         margin-top: 10px;
-        margin-left: 20px;
+        margin-left: 72px;
     }
     #login{
         margin-left: 37%;
@@ -543,7 +549,7 @@
               &nbsp;&nbsp;&nbsp;
               <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
               &nbsp;&nbsp;&nbsp;
-              <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+              <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email"> &nbsp; Reset Your Password &nbsp;</button>
             </div>
             <!-- Container where we'll display the user details -->
             <div id="status">
@@ -876,7 +882,8 @@
 		 <h1 class = "signupheading">Sign Up Today and Get News Letters From Us</h1>
          <div id="signup">
              <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="email" name="email" placeholder="Email"/>
-             <button class="mdl-button mdl-js-button mdl-button--raised" style="background-color: mediumseagreen" id="quickstart-sign-up" name="signup">Sign Up</button>
+             <input class="mdl-textfield__input" style="display:inline;width:auto;background-color: white;" type="text" id="password" name="password" placeholder="Password"/>
+             <button class="mdl-button mdl-js-button mdl-button--raised" style="background-color: mediumseagreen; margin-left: 30px;" id="quickstart-sign-up" name="signup">Sign Up</button>
          </div>
 	</div>
 	<!-- Third contents-->
