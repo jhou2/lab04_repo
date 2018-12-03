@@ -1,2 +1,2 @@
 # lab04_repo
-comp1930 project 01 lab04 excercise group project
+COMP 1930 Project 1 Final Web design and development.
