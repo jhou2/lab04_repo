@@ -60,7 +60,7 @@ body, h1, h2, h3, h4, h5, h6 {
      #device-btn1{
          margin-bottom: 7%;
          margin-top: 6%;
-         margin-left: 44%;   
+         margin-left: 44%;
      }
 	#brandInfo {
 		margin-top: 25px;
@@ -111,18 +111,34 @@ body, h1, h2, h3, h4, h5, h6 {
 		background-size: cover;
 	}
 
-	/* First image */
 	.bgimg-1 {
 		background-image: url('https://farm6.staticflickr.com/5542/30017499820_49927254e0_k.jpg');
 		min-height: 850px;
+		background-size: 100% 100%;
+		transition: 1s ease-in;
+	}
+
+	.bgimg-1:hover {
+		background-size: 105% 105%;
 	}
 
 	/* Second image */
 	.bgimg-2 {
+<<<<<<< HEAD
 		background-image: url("https://cdn4.vectorstock.com/i/1000x1000/77/38/environmental-recycling-background-vector-757738.jpg");
+=======
+		background-image: url("../../Pictures/processbackground.png");
+>>>>>>> 3252275f0eb3e45c936291dd5e39e867dbe0defe
 		min-height: 800px;
-        filter: grayscale(50%);
+		filter: grayscale(50%);
+		background-size: 100% 100%;
+		transition: 1s ease-in;
 	}
+
+	.bgimg-2:hover {
+		background-size: 105% 105%;
+	}
+
     #firstcolumn{
         width: 33%;
         margin-left: 64px;
@@ -177,7 +193,7 @@ body, h1, h2, h3, h4, h5, h6 {
          line-height: 300px;
  		vertical-align: middle;
  		text-align: center;
- 		color: black;   
+ 		color: black;
      }
     #signup{
         display: inline;
@@ -187,7 +203,7 @@ body, h1, h2, h3, h4, h5, h6 {
         margin-right: 10px;
         margin-left: 11%;
      }
-       
+
     .deviceBtn{
 	   width: 130px;
 	   height: 130px;
@@ -364,7 +380,7 @@ body, h1, h2, h3, h4, h5, h6 {
      }
      label p{
          font-size: 15pt;
-         margin-top: -29px; 
+         margin-top: -29px;
          margin-left: 20px;
      }
      label img{
@@ -480,6 +496,6 @@ body, h1, h2, h3, h4, h5, h6 {
         margin-left: 72px;
     }
     #login{
-        margin-left: 37%;
+        margin-left: auto;
         position: absolute;
     }

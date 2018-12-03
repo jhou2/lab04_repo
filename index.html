@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style media="screen">
+	<title>TEAM 2</title>
+
+
+	@import url(https://fonts.googleapis.com/css?family=Flamenco);
+
+
+	body, h1, h2, h3, h4, h5, h6 {
+		font-family: "Lato", sans-serif;
+	}
+
+	body, html {
+		height: 100%;
+		color: #777;
+	}
+
+	#top{
+		width: 100%;
+		color: white;
+        height: 15%;
+		background: white;
+		font-weight: bold;
+	}
+
+
+	.middletext {
+		line-height: 300px;
+		vertical-align: middle;
+		text-align: center;
+		color: black;
+		font-family: Flamenco;
+	}
+
+	.navbar li a:hover {
+        background-color: #DAEDDB;
+		color: #fff;
+	}
+
+	.navbar-fixed {
+		position: fixed;
+		z-index: 1;
+
+	}
+
+	.fields {
+		margin: 5%;
+	}
+    .copyright{
+        text-align: center;
+        color: #DAD8D1;
+    }
+	#about-us{
+		float: right;
+        margin-right: 10px;
+		text-align: center;
+	}
+	#homepage{
+		float: left;
+		text-align: center;
+        margin-top: 13px;
+        margin-left: 10px;
+        font-size: 1.5em;
+
+	}
+	.textfield {
+		outline: 0;
+		border-width: 0px 0px 1px 0px;
+		border-color: grey;
+		width: 80%;
+		display: inline;
+	}
+
+	#brandInfo {
+		margin: 40px;
+	}
+
+	/* About Section */
+	#about {
+		font-size: 1.4em;
+	}
+    #logo{
+        width: 30%;
+        float: left;
+    }
+    #img1{
+        width: 70%;
+        height: 55%;
+        margin-bottom: 10px;
+        filter: opacity(25%);
+    }
+    #img2, #img3{
+        width: 70%;
+        height: 55%;
+        margin-bottom: 10px;
+        filter: opacity(30%);
+    }
+    #img4{
+        width: 80%;
+        height: 60%;
+        margin-bottom: 4px;
+        filter: opacity(30%);
+    }
+
+
+
+
+	/* Table of Devices*/
+	#tableOfDevices {
+		float: right;
+		display: none;
+		padding: 8px;
+		border: black solid 2px;
+		border-radius: 5px;
+		table-layout: auto;
+	}
+
+
+	/* Create a Parallax Effect */
+	.bgimg-1, .bgimg-2, .bgimg-3 {
+		opacity: 0.7;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	/* First image */
+	.bgimg-1 {
+		background-image: url('https://farm6.staticflickr.com/5542/30017499820_49927254e0_k.jpg');
+		min-height: 100%;
+	}
+
+	/* Second image */
+	.bgimg-2 {
+		background-image: url('https://farm9.staticflickr.com/8280/30017501010_d8a240493c_k.jpg');
+		min-height: 500px;
+	}
+
+	/* Third image */
+	.bgimg-3 {
+		background-image: url("https://farm6.staticflickr.com/5542/30017499820_49927254e0_k.jpg");
+		min-height: 400px;
+	}
+
+ .deviceBtn{
+	width: 130px;
+	height: 130px;
+	margin-top: 20px;
+	/*float: left;*/
+ }
+ #deviceInfo {
+	 width: 637px;
+	 margin-right: auto;
+	 margin-left: 60px;
+
+ }
+ #brandInfo{
+	margin-left: 60px;
+ }
+ #modelInfo{
+	margin-left: 140px;
+ }
+ #brandInfo-laptop{
+	margin-left: 140px;
+}
+ #modelInfo-laptop-brand1, #modelInfo-laptop-brand2, #modelInfo-laptop-brand3, #modelInfo-laptop-brand4, #modelInfo-laptop-brand5{
+	margin-left: 140px;
+ }
+ #brandInfo-phone{
+	margin-left: 140px;
+ }
+ #modelInfo-phone-brand1,#modelInfo-phone-brand2, #modelInfo-phone-brand3, #modelInfo-phone-brand4, #modelInfo-phone-brand5{
+  margin-left: 140px;
+ }
+ #brandInfo-accessory{
+	margin-left: 140px;
+ }
+#modelInfo-accessory-brand1, #modelInfo-accessory-brand2, #modelInfo-accessory-brand3, #modelInfo-accessory-brand4, #modelInfo-accessory-brand5{
+	margin-left: 140px;
+ }
+.btn {
+    margin-right: 30px;
+        }
+ #deviceInfo img {
+ 	width: 100px;
+ 	height: 70px;
+ }
+
+
+ .none {
+ 	display: none;
+  }
+
+/* faq section */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding:18px;
+    display: none;
+    background-color: #F5F5F5;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+	<div id="top">
+		<nav class="navbar fixed-top navbar-light bg-white">
+            <li><a href="#"><img src = "logo.png" id = "logo"></a><a href="#" class="navbar-brand glyphicon glyphicon-phone" id="homepage">Green+</a></li>
+			 <li><a href="#point" class="navbar-brand" id="about-us">About Us</a></li>
+		</nav>
+	</div>
+
+	<!-- First Image -->
+	<div class="bgimg-1">
+		<h1 class = "middletext">Salvage Your E-devices Instantly</h1>
+	</div>
+
+        <div id="deviceInfo" class="btn-group">
+            <button class="btn btn-light deviceBtn" id="device-btn1" type="button" ><img src = "computericon.png" id = "img1"><br/>Computer</button>
+            <button class="btn btn-light deviceBtn" id="device-btn2" type="button"><img src = "laptopicon.png" id = "img2"><br/>Laptop</button>
+            <button class="btn btn-light deviceBtn" id="device-btn3" type="button"><img src = "cellphoneicon.png" id = "img3"><br/>Phone</button>
+            <button class="btn btn-light deviceBtn" id="device-btn4" type="button"><img src = "accessoriesicon.png" id = "img4"><br/>Accessory</button>
+        </div><br/>
+
+
+  <!--Computer brand 1~5 -->
+
+<div id="brandInfo" class="btn-group">
+	  <button class="btn btn-light computer-brand-btn" id="brand1" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand2" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand3" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand4" type="button"></button>
+	  <button class="btn btn-light computer-brand-btn" id="brand5"  type="button"></button>
+</div><br/><br/>
+
+<div id="modelInfo" class="btn-group">
+	<button class="btn btn-light computer-model-btn" id="model1" type="button"></button>
+	<button class="btn btn-light computer-model-btn" id="model2" type="button"></button>
+	<button class="btn btn-light computer-model-btn" id="model3" type="button"></button>
+	<button class="btn btn-light computer-model-btn" id="model4" type="button"></button>
+	<button class="btn btn-light computer-model-btn" id="model5" type="button"></button>
+</div>
+
+
+	<!-- Second Image with Add Whatever -->
+	<div class="bgimg-2">
+		<h1 class = "middletext">How We Process?</h1>
+	</div>
+	<!-- Second contents-->
+	<div class="fields" id="content2">
+		<h2>Salvaging</h2>
+		<p>We collect devices from customers and check if all the parts are exist. If there is no problem with parts, we test the devices to see it works properly or not then, all the parts are separted individually and orginzed by its categories. We make sure all the memoris stored in the device is all deleted in this process.</p><br/><br/>
+        <h2 style = "text-align: center">FAQ</h2>
+        <button class="accordion">How do I send my device?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">How long does it take for me to get paid once you've received my device?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">What do I need to include with the phone when I send it to your company?</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+    </div>
+
+	<!-- Theid Image with Add Whatever -->
+	<div class="bgimg-3">
+		<h1 class = "middletext"></h1>
+	</div>
+	<!-- Third contents-->
+	<!-- About us content-->
+
+	<div id="content3" class="fields">
+		<h2 id="point">ABOUT US</h2>
+		<p><em>Contact Information</em></p>
+		<p>Address<br>Willingdon St, Burnaby, BC</p>
+		<p>Email<br>greenplus@gmail.com</p>
+		<p>Phone<br>604-123-4567</p>
+</div>
+
+	<!-- footer -->
+	<footer class="fields">
+		<p>Made by Jessica, Sunny, Chris</p><br/>
+        <p class="copyright">@Copyright 2018 by Green+. All Rights Reserved.</p>
+	</footer>
+ 	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script type = "text/javascript" src = "indexjs.js"></script>
+
+	<script>
+
+	//Goes to the top page when hit refresh.
+		window.onbeforeunload = function () {
+  		window.scrollTo(0, 0);
+		}
+
+//button select functions
+		$(".btn-group > .btn").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+});
+
+	</script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+
+
+</body>
+</html>
+
+<!--code not in use-------------------------------->
+
+<!-- <div id="phoneBrandInfo">
+		<form>
+			<fieldset>
+				<h4>Model type</h4><br/>
+						<select name="Brand" required>
+							<option value="">-</option>
+							<option value="Apple" required>Apple</option>
+							<option value="Samsung" required>Samsung</option>
+							<option value="HuaWei" required>HuaWei</option>
+							<option value="LG" required>LG</option>
+						</select><br/><br/>
+						<a href = "#" id = "submit1">Submit</a>
+						<br/><br/>
+			</fieldset>
+		</form>
+	</div>
+
+
+	<div id="modelInfo">
+	<form>
+		<fieldset>
+			<h4>Your Personal Info</h4><br/>
+			Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+			Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
+			Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+			Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+			Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+			</textarea><br/><br/>
+			<a href = "#" id = "button1">Submit</a><input type = "reset" value = "Reset"/>
+		</fieldset>
+	</form>
+</div>
+
+<div id="conditionInfo">
+<form>
+	<fieldset>
+		<h4>Your Personal Info</h4><br/>
+		Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+		Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
+		Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+		Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+		Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+		</textarea><br/><br/>
+		<a href = "#" id = "button1">Submit</a><input type = "reset" value = "Reset"/>
+	</fieldset>
+</form>
+</div>
+
+<div id="addAnotherDevice">
+<form>
+	<fieldset>
+		<h4>Your Personal Info</h4><br/>
+		Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+		Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # and Street #" required /><br/><br/><br/>
+		Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+		Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+		Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+		</textarea><br/><br/>
+		<a href = "#" id = "button1">Submit</a><input type = "reset" value = "Reset"/>
+	</fieldset>
+</form>
+</div> -->
+
+
+
+
+<!--
+
+<div id = "tableOfDevices">
+	<table>
+		<tr>
+			<th>List of Devices</th>
+		</tr>
+		<tr>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+		</tr>
+	</table>
+</div>
+ -->
+<!-- <div id="deviceInfo">
+<h4>Device type</h4>
+		<p>Please choose your device type.</p><br/>
+				<form action ="/action_page.php">
+	<select required>
+								<option value="">Choose an option</option>
+		<option value="computer">Computer</option>
+		<option value="laptop">Laptop</option>
+		<option value="phone">Phone</option>
+		<option value="accessory">Accessory</option>
+		<option value="debris">Debris</option>
+								<option value="parts">Parts</option>
+						</select><br/><br/>
+	<a href = "#" id = "submit1"><input type = "submit" value = "Submit"/></a>
+	<input type = "reset" value = "Reset"/><br/><br/>
+	<br/><br/>
+		</form>
+</div>
+
+<div id="personalInfo">
+<form>
+<fieldset>
+	<h4>Your Personal Info</h4><br/>
+	Name: <br/><input class = "textfield" type = "text" name = "firstName" title = "First name here" placeholder = "First and Last name" required/><br/><br/><br/>
+	Address:<br/><input class = "textfield" type = "text" name = "address" title = "address" placeholder = "Suite # (if applicable) and Street #" required /><br/><br/><br/>
+	Email:<br/><input class = "textfield" type = "text" name = "email" title = "email" placeholder = "Email" required /><br/><br/><br/>
+	Phone Number:<br/><input class = "textfield" type = "text" name = "phonenumber" title = "phonenumber" placeholder = "Phone #" required /><br/><br/><br/>
+	Any Additional Information:<br/><textarea name = "description" rows = "13" cols = "50">
+	</textarea><br/><br/>
+	<a href = "#" id = "submit2"><input type = "submit" value = "Submit"/></a>
+						<input type = "reset" value = "Reset"/>
+</fieldset>
+</form>
+</div> -->
