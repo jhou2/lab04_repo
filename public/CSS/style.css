@@ -124,9 +124,12 @@ body, h1, h2, h3, h4, h5, h6 {
 
 	/* Second image */
 	.bgimg-2 {
-		background-image: url("../Pictures/processbackground.png");
+		background-image: url("../../Pictures/processbackground.png");
 		min-height: 850px;
+        min-width: auto;
 		filter: grayscale(50%);
+		background-size: 100% 100%;
+		transition: 1s ease-in;
 	}
 
 	.bgimg-2:hover {
@@ -158,8 +161,8 @@ body, h1, h2, h3, h4, h5, h6 {
     }
     #lastcolumn{
         width: 33%;
+				float:left;
         color: black;
-        float: left;
     }
    .lastcolimg1{
         width: 30%;
