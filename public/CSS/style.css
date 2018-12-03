@@ -124,11 +124,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 	/* Second image */
 	.bgimg-2 {
-<<<<<<< HEAD
-		background-image: url("https://cdn4.vectorstock.com/i/1000x1000/77/38/environmental-recycling-background-vector-757738.jpg");
-=======
-		background-image: url("../../Pictures/processbackground.png");
->>>>>>> 3252275f0eb3e45c936291dd5e39e867dbe0defe
+		background-image: url("../Pictures/processbackground.png");
 		min-height: 800px;
 		filter: grayscale(50%);
 		background-size: 100% 100%;
