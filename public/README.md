@@ -18,4 +18,16 @@ what's included:
 
  when device button is clicked, the modal screen, which contains model search, pay-back information form, and the estimated cost in the cart. Users can easily fill it up the forms and submit it by simply click the checkout button.
  
- # 
+# How it works
+ how it works section explains how the company processes to salvage devices visually.
+ 
+# Our mission and frequently asked questions
+ The mission statement section identify the company's target market and customers. Morever ,telling what makes the business unique or provides competitive advantage compared to other company.
+ 
+ FAQ section simply answers the basic questions that are frequently asked to the company.
+ 
+# News letters
+ By simply submitting customer's email address, customers are joining the email subscription list to get a recent updates from our website
+ 
+# About us
+ Basically displaying company's address, email, and phone number so that the company is approachable to any customers.
