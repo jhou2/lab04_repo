@@ -54,7 +54,7 @@ body, h1, h2, h3, h4, h5, h6 {
     .devicebtnpara{
          margin-bottom: -2%;
          font-size: 25pt;
-         margin-left: 38%;
+         text-align: center;
          margin-top: 5%;
      }
      #device-btn1{
@@ -160,7 +160,6 @@ body, h1, h2, h3, h4, h5, h6 {
     }
     #lastcolumn{
         width: 33%;
-        float: left;
         color: black;
     }
    .lastcolimg1{
@@ -480,18 +479,19 @@ body, h1, h2, h3, h4, h5, h6 {
     .col-25 {
         margin-bottom: 20px;
     }
-    }
+  }
+		#login{
+				margin-left: 38%;
+				position: absolute;
+
+		}
 
     /* login format */
     #buttons button{
         margin-top: 10px;
         margin-left: 20px;
-       }
+    }
     #status{
         margin-top: 10px;
         margin-left: 72px;
-    }
-    #login{
-        margin-left: auto;
-        position: absolute;
     }

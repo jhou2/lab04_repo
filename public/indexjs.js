@@ -30,8 +30,8 @@ formSubmit.on('click', function(){
 		var model = snapshot.val();
 		var itemName = modelName + " " + model.price;
 		console.log(model);
-		if (model==null) {
-			alert("We're currently not accepting this model.")
+		if (model == null || !model.equals("iPhone 7")) {
+			alert("That is an invalid model type.")
 		}else{
 			var item = $('#shopping').append($('<p>').text(itemName));
 			itemsInCart.push(itemName);
