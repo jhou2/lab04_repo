@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/seung2613/lab04_repo#readme",
   "dependencies": {
+    "firebase-admin": "^6.3.0",
+    "firebase-functions": "^2.1.0",
     "firebaseui": "^3.4.1"
   }
 }

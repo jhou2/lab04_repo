@@ -26,13 +26,18 @@ var database = firebase.database();
 var formSubmit = $('#form-submit');
 formSubmit.on('click', function(){
 	modelName = $('#input').val();
+	console.log("this: "+modelName);
+
+
+
 	firebase.database().ref('/phone/' + brandName + '/' + modelName).once('value').then(function(snapshot) {
 		var model = snapshot.val();
-		var itemName = modelName + " " + model.price;
-		console.log(model);
-		if (model == null || !model.equals("iPhone 7")) {
-			alert("That is an invalid model type.")
+
+		if (model == null) {
+			alert("That is an invalid model type.");
 		}else{
+			var itemName = modelName + " " + model.price;
+
 			var item = $('#shopping').append($('<p>').text(itemName));
 			itemsInCart.push(itemName);
 			console.log(itemsInCart);
