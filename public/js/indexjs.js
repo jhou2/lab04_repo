@@ -1,4 +1,4 @@
-// $('#brandInfo').css('display','none');
+//Declaring variables and list of brand name.
 var brandName = "";
 var modelName = "";
 var newKey = "";
@@ -26,10 +26,12 @@ var database = firebase.database();
 var formSubmit = $('#form-submit');
 formSubmit.on('click', function(){
 	modelName = $('#input').val();
-	console.log("this: "+modelName);
+	// console.log("this: "+modelName);
 
 
-
+// Getting(Searching) the name of phone model from the database,
+// and shows it to the "cart" section. Also shows the sum of the device.
+// Alert message if the device user typed in is not in the database.
 	firebase.database().ref('/phone/' + brandName + '/' + modelName).once('value').then(function(snapshot) {
 		var model = snapshot.val();
 
@@ -54,7 +56,7 @@ formSubmit.on('click', function(){
 	});
 });
 
-var count = 0;
+//Write to the firebase server what user wrote in the form.
 var checkout = $('#checkout');
 checkout.on('click', function(){
 	firebase.database().ref('/users/').push().set({
@@ -68,7 +70,7 @@ checkout.on('click', function(){
 		cart: itemsInCart
 	});
 })
-
+//Write the subscription emamil info to the firebase server.
 var subscribeEmail = $('#quickstart-sign-up2');
 subscribeEmail.on('click', function(){
 	firebase.database().ref('/subscription_list/').push().set({
