@@ -32,7 +32,6 @@
             });
             // [END authwithemail]
           }
-          document.getElementById('quickstart-sign-in').disabled = true;
         }
         /**
          * Handles the sign up button press.
@@ -111,7 +110,6 @@
           // [START authstatelistener]
           firebase.auth().onAuthStateChanged(function(user) {
             // [START_EXCLUDE silent]
-            document.getElementById('quickstart-verify-email').disabled = true;
             // [END_EXCLUDE]
             if (user) {
               // User is signed in.
@@ -126,9 +124,6 @@
               document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
               document.getElementById('quickstart-sign-in').textContent = 'Sign out';
               document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-              if (!emailVerified) {
-                document.getElementById('quickstart-verify-email').disabled = false;
-              }
               // [END_EXCLUDE]
             } else {
               // User is signed out.
@@ -145,7 +140,6 @@
           // [END authstatelistener]
           document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
           document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-          document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
           document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
         }
         window.onload = function() {

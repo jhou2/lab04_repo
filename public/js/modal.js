@@ -9,7 +9,11 @@
 
         // When the user clicks the button, open the modal
         btn.onclick = function() {
-            modal.style.display = "block";
+            if (firebase.auth().currentUser) {
+                modal.style.display = "block";
+            } else{
+                alert("Please sign-in to proceed.");
+            }
         }
 
         // When the user clicks on <span> (x), close the modal
