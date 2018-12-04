@@ -68,3 +68,10 @@ checkout.on('click', function(){
 		cart: itemsInCart
 	});
 })
+
+var subscribeEmail = $('#quickstart-sign-up2');
+subscribeEmail.on('click', function(){
+	firebase.database().ref('/subscription_list/').push().set({
+		subscription_email: $('#email2').val()
+	});
+})
